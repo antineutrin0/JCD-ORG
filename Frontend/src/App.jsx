@@ -8,6 +8,8 @@ import HeroSection from './components/HeroSection';
 import NoticeCarousel from './components/NoticeCarosel';
 import Footer from './components/Footer';
 import { Outlet } from 'react-router';
+import BlogPagination from './components/blog_activity/BlogPagination';
+import SingleBlog from './components/blog_activity/SingleBlog';
 
 function App() {
   return (
@@ -17,9 +19,9 @@ function App() {
      <MainNavbar></MainNavbar>
     
      <Outlet></Outlet>
-     <Welcome></Welcome>
+     <Bd_map></Bd_map>
+     <BlogPagination></BlogPagination>
      <Footer></Footer>
-     
      </>
     
   );

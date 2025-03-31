@@ -9,9 +9,6 @@ export default function Home() {
     <div>
         <HeroSection></HeroSection>
      <NoticeCarousel></NoticeCarousel>
-    
-     <Bd_map></Bd_map>
-     <LanguageSwitcher></LanguageSwitcher>
     </div>
   )
 }
