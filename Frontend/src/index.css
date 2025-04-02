@@ -1,13 +1,31 @@
 @import "tailwindcss";
 
-.map-wrapper{
+
+
+.map-wrapper {
   text-align: center;
   width: 100vw;
 }
 
-svg{
-  height:800px;
+svg {
+  height: 800px;
   width: 800px;
+  max-width: 100%; /* Set maximum width to 100% to prevent overflow */
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+  svg {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  svg {
+    height: 400px;
+    width: 400px;
+  }
 }
 
 

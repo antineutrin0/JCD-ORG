@@ -1,0 +1,112 @@
+{
+    "blogs": [
+      {
+        "id": 1,
+        "title": "Shrimp and Chorizo Paella",
+        "author": "R",
+        "date": "September 14, 2016",
+        "image": "https://images.unsplash.com/photo-1741800465167-0c276ad75e08?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
+        "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
+        "method": "Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10 minutes. Heat oil in a large pan, cook chicken, shrimp, and chorizo until browned. Add ingredients, simmer broth, and let rice absorb flavors. Serve hot!"
+      },
+      {
+        "id": 2,
+        "title": "Classic Margherita Pizza",
+        "author": "M",
+        "date": "August 22, 2018",
+        "image": "https://images.unsplash.com/photo-1741850821836-a0228e561406?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8",
+        "description": "A simple yet delicious Margherita pizza with fresh tomatoes, mozzarella, and basil.",
+        "method": "Preheat oven to 475°F. Roll out dough, spread sauce, add toppings, and bake for 12-15 minutes. Enjoy!"
+      },
+      {
+        "id": 3,
+        "title": "Homemade Sushi Rolls",
+        "author": "S",
+        "date": "July 5, 2019",
+        "image": "https://images.unsplash.com/photo-1742183635099-bf6d03fca5c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D",
+        "description": "Learn how to make sushi rolls at home with this easy recipe.",
+        "method": "Prepare sushi rice, cut fresh fish, roll with nori, and slice into bite-sized pieces."
+      },
+      {
+        "id": 4,
+        "title": "Chocolate Lava Cake",
+        "author": "A",
+        "date": "March 10, 2021",
+        "image": "https://images.unsplash.com/photo-1741850821875-926bc6332d97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A rich and gooey chocolate lava cake, perfect for dessert lovers.",
+        "method": "Mix ingredients, pour into ramekins, bake at 425°F for 10-12 minutes, and serve warm."
+      },
+      {
+        "id": 5,
+        "title": "Fresh Caesar Salad",
+        "author": "L",
+        "date": "June 15, 2022",
+        "image": "https://images.unsplash.com/photo-1743031031853-15698b5b8419?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A fresh and crunchy Caesar salad with homemade dressing.",
+        "method": "Chop romaine lettuce, toss with dressing, croutons, and parmesan cheese. Serve chilled."
+      },
+      {
+        "id": 6,
+        "title": "BBQ Chicken Wings",
+        "author": "J",
+        "date": "January 5, 2023",
+        "image": "https://images.unsplash.com/photo-1694726635403-364e9f99fbd5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D",
+        "description": "Spicy and tangy BBQ chicken wings that are perfect for game night.",
+        "method": "Marinate wings, bake or fry until crispy, and coat with BBQ sauce."
+      },
+      {
+        "id": 7,
+        "title": "Avocado Toast with Egg",
+        "author": "E",
+        "date": "May 12, 2023",
+        "image": "https://images.unsplash.com/photo-1680528811837-d4e928e9ac11?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D",
+        "description": "A simple and healthy avocado toast with a perfectly cooked egg on top.",
+        "method": "Toast bread, mash avocado, top with egg, and season to taste."
+      },
+      {
+        "id": 8,
+        "title": "Classic Pancakes",
+        "author": "B",
+        "date": "September 30, 2023",
+        "image": "https://images.unsplash.com/photo-1700393289648-25e5d8231571?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "Fluffy and delicious pancakes with a drizzle of maple syrup.",
+        "method": "Mix batter, cook on a hot griddle, flip until golden brown, and serve."
+      },
+      {
+        "id": 9,
+        "title": "Creamy Tomato Pasta",
+        "author": "C",
+        "date": "November 8, 2023",
+        "image": "https://images.unsplash.com/photo-1743031031853-15698b5b8419?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A creamy tomato pasta dish that is quick and easy to prepare.",
+        "method": "Cook pasta, prepare tomato sauce, mix with cream, and toss with pasta."
+      },
+      {
+        "id": 10,
+        "title": "Berry Smoothie Bowl",
+        "author": "D",
+        "date": "February 20, 2024",
+        "image": "https://images.unsplash.com/photo-1722706049551-e4d948146375?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D",
+        "description": "A refreshing and nutritious berry smoothie bowl topped with granola and fruits.",
+        "method": "Blend berries with yogurt, pour into a bowl, and add toppings."
+      },
+      {
+        "id": 11,
+        "title": "Shrimp and Chorizo Paella",
+        "author": "R",
+        "date": "September 14, 2016",
+        "image": "https://images.unsplash.com/photo-1741800465167-0c276ad75e08?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
+        "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
+        "method": "Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10 minutes. Heat oil in a large pan, cook chicken, shrimp, and chorizo until browned. Add ingredients, simmer broth, and let rice absorb flavors. Serve hot!"
+      },
+      {
+        "id": 12,
+        "title": "Classic Margherita Pizza",
+        "author": "M",
+        "date": "August 22, 2018",
+        "image": "https://images.unsplash.com/photo-1741850821836-a0228e561406?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8",
+        "description": "A simple yet delicious Margherita pizza with fresh tomatoes, mozzarella, and basil.",
+        "method": "Preheat oven to 475°F. Roll out dough, spread sauce, add toppings, and bake for 12-15 minutes. Enjoy!"
+      }
+    ]
+  }
