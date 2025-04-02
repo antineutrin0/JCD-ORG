@@ -9,6 +9,8 @@ function App() {
      <Bd_map></Bd_map>
      <LanguageSwitcher></LanguageSwitcher>
      <Welcome></Welcome>
+    
+     
      </>
     
   );
