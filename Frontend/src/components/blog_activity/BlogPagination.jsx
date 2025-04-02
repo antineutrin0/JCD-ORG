@@ -59,7 +59,7 @@ const BlogPagination = () => {
 
   return (
     <div>
-       <div className=" m-4 flex flex-col justify-items-start items-start">
+       <div className=" ml-8 my-4 flex flex-col justify-items-start items-start">
         <p className=" text-2xl mt-4 font-semibold text-center">Recent events</p>
       </div>
 

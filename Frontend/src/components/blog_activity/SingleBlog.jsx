@@ -1,42 +1,51 @@
 import React from "react";
+import { FaFacebookF, FaTwitter, FaGooglePlusG, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 const SingleBlog = () => {
+  const blog = {
+    id: 10,
+    title: "YUVA NYAY",
+    author: "D",
+    date: "06 APR 2024",
+    image:
+      "https://images.pexels.com/photos/26738322/pexels-photo-26738322/free-photo-of-angler-by-river-in-mountains.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    description:
+      "YUVA NYAY, a comprehensive initiative, stands as a beacon of hope for the youth of India, promising to address crucial issues plaguing their aspirations and livelihoods Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit quia accusantium nihil reiciendis ab sapiente nisi rem expedita mollitia fuga consectetur omnis eveniet dolorum ea neque ipsa nesciunt quae impedit, nobis, magni voluptas eius corrupti. Nobis, quia unde! Earum, ratione doloribus rerum facere voluptatem quasi deleniti consequatur alias cum aperiam omnis inventore exercitationem commodi, quibusdam quae iste odio minima? Provident cum similique incidunt cupiditate ea adipisci est sed rerum ratione! Distinctio ex magni nulla, quos impedit amet odit consequatur, in quo aut, atque eum! Ipsa omnis placeat doloremque magni, laudantium non voluptates modi porro excepturi eaque tempore minima animi!"
+  };
 
-    const blog={
-
-            "id": 10,
-            "title": "Berry Smoothie Bowl",
-            "author": "D",
-            "date": "February 20, 2024",
-            "image": "https://images.unsplash.com/photo-1722706049551-e4d948146375?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D",
-            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sed mollitia sit velit non quod ex excepturi doloremque, distinctio nisi ipsa nobis in repudiandae impedit exercitationem suscipit, officia debitis? Velit fuga recusandae enim nostrum temporibus eaque dolor omnis aliquid veritatis voluptatem quos ex aliquam quo, debitis quisquam? Reprehenderit obcaecati, aliquid corrupti voluptatibus voluptates exercitationem itaque delectus ut quibusdam, iste, laborum cum laboriosam aperiam corporis blanditiis sequi ducimus ratione excepturi! Repudiandae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nisi blanditiis nemo architecto esse nobis quasi non, quod consectetur maiores quidem ipsa necessitatibus, magnam veritatis saepe tempora? Cupiditate assumenda fuga eius rerum delectus animi provident odit dolorem nesciunt ad itaque, tempore dolorum corporis, reprehenderit dicta voluptates amet aspernatur quod, eveniet quo ipsum harum eligendi accusamus! A facilis, harum architecto necessitatibus nostrum animi placeat qui nam fuga nobis, sit sed aut.",
-            "method": "Blend berries with yogurt, pour into a bowl, and add toppings."
-    }
   return (
-    <div className="max-w-4xl mx-auto bg-green-900 text-white rounded-lg shadow-lg overflow-hidden  flex flex-col md:flex-row justify-center items-center mb-8 mt-4">
-      {/* Left Content: Title, Date, Description */}
-      <div className="md:w-1/2 p-6 flex flex-col justify-center">
-        <h2 className="text-2xl font-bold mb-2">{blog.title}</h2>
-        <p className="text-gray-300 text-sm mb-4">{blog.date}</p>
-        <p className="text-gray-200 text-lg overflow-y-auto h-60 md:h-96">{blog.description}</p>
+    <div className="max-w-3xl mx-auto bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden p-6">
+      {/* Breadcrumb */}
+      <div className="text-sm text-gray-500 mb-2">
+        <span className="text-blue-600">Home</span> &gt; <span className="text-blue-600">In Focus</span> &gt;{" "}
+        <span className="text-gray-900 font-semibold">{blog.title}</span>
       </div>
 
-      {/* Right Content: Image & Buttons */}
-      <div className="md:w-1/2 relative">
-        <img
-          src={blog.image}
-          alt={blog.title}
-          className="w-full h-full object-cover"
-        />
-
-        {/* Reaction and Share Buttons */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4">
-          <button className="text-red-500 hover:text-red-600 text-2xl">❤️</button>
-          <button className="text-blue-500 hover:text-blue-600 text-2xl">🔗</button>
-        </div>
+      {/* Title */}
+     <div className="flex items-center justify-between mb-4 h-16">
+     <div className="w-2/3 md:w-3/4 lg:w-4/5 ">
+      <h2 className="text-2xl font-bold mb-2">{blog.title}</h2>
+      <p className="text-gray-500 text-sm">{blog.date}</p>
       </div>
+      {/* Social Media Icons */}
+      <div className="flex space-x-3 my-3 w-1/3 md:w-1/4 lg:w-1/5 justify-end ">
+        <FaFacebookF className="text-blue-600 hover:text-blue-800 cursor-pointer" />
+        <FaTwitter className="text-blue-400 hover:text-blue-600 cursor-pointer" />
+        <FaGooglePlusG className="text-red-500 hover:text-red-700 cursor-pointer" />
+        <FaLinkedinIn className="text-blue-700 hover:text-blue-900 cursor-pointer" />
+        <FaWhatsapp className="text-green-500 hover:text-green-700 cursor-pointer" />
+      </div>
+     </div>
+
+      {/* Image */}
+      <div className="relative mb-4">
+        <img src={blog.image} alt={blog.title} className="w-full rounded-lg" />
+       
+      </div>
+
+      {/* Description */}
+      <p className="text-gray-700">{blog.description}</p>
     </div>
-
   );
 };
 
