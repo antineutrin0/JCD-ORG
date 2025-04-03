@@ -24,9 +24,9 @@ function Bd_map() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row bg-green-700 items-stretch justify-center min-h-screen">
+    <div className="flex flex-col md:flex-row bg-gradient-to-r from-green-900 via-green-600 to-green-500 items-stretch justify-center min-h-screen">
   {/* Left Section */}
-  <div className="flex-1 bg-green-900 flex flex-col items-center justify-center p-4 md:p-8 relative">
+  <div className="flex-1  flex flex-col items-center justify-center p-4 md:p-8 relative">
     <h1 className="text-center text-2xl md:text-3xl lg:text-6xl font-bold mb-4">OUR FOOTPRINTS IN BANGLADESH</h1>
     <p className="text-center text-lg md:text-xl mb-4">Click on a district to see our contribution on that district.</p>
     <p className="text-center text-xl md:text-2xl lg:text-4xl border-b">Explore Bangladesh</p>

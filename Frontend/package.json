@@ -16,6 +16,7 @@
     "@mui/material": "^7.0.1",
     "@react-map/bangladesh": "^1.0.9",
     "@tailwindcss/vite": "^4.0.17",
+    "framer-motion": "^12.6.3",
     "i18next": "^24.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

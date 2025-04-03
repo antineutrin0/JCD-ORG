@@ -1,0 +1,64 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "72 Days 272 Questions 0 Jawaab",
+      "date": "31 MAY 2024",
+      "author": "John Doe",
+      "image": "https://cdn.pixabay.com/photo/2025/03/20/18/28/sunset-9483600_640.jpg",
+      "description": "After 72 days and 272 questions, the government remains silent on major issues, sparking nationwide debates and protests.",
+      "category": "Politics",
+      "source": "The Daily News",
+      "comments": 45,
+      "likes": 120
+    },
+    {
+      "id": 2,
+      "title": "INC MANIFESTO",
+      "date": "06 APR 2024",
+      "author": "Sarah Smith",
+      "image": "https://cdn.pixabay.com/photo/2023/10/06/07/14/architecture-8297605_640.jpg",
+      "description": "The Indian National Congress releases its manifesto, promising economic reforms, employment growth, and social justice.",
+      "category": "Politics",
+      "source": "Political Times",
+      "comments": 60,
+      "likes": 200
+    },
+    {
+      "id": 3,
+      "title": "YUVA NYAY",
+      "date": "06 APR 2024",
+      "author": "Rajesh Kumar",
+      "image": "https://cdn.pixabay.com/photo/2024/01/07/14/12/man-8493246_640.jpg",
+      "description": "A new initiative, 'Yuva Nyay,' aims to empower the youth with better education, job opportunities, and financial assistance.",
+      "category": "Youth & Education",
+      "source": "Youth Today",
+      "comments": 78,
+      "likes": 350
+    },
+    {
+      "id": 4,
+      "title": "Another News",
+      "date": "15 MAR 2024",
+      "author": "Lisa Brown",
+      "image": "https://cdn.pixabay.com/photo/2022/11/02/05/53/cycling-7564103_640.jpg",
+      "description": "Cycling enthusiasts celebrate World Bicycle Day with a citywide rally promoting eco-friendly transportation.",
+      "category": "Environment",
+      "source": "Eco Times",
+      "comments": 34,
+      "likes": 90
+    },
+    {
+      "id": 5,
+      "title": "New Policy Announcement",
+      "date": "20 FEB 2024",
+      "author": "Michael Johnson",
+      "image": "https://cdn.pixabay.com/photo/2023/01/22/05/51/nature-7735653_960_720.jpg",
+      "description": "The government announces a new policy focused on sustainable development and green energy initiatives.",
+      "category": "Government & Policy",
+      "source": "National Herald",
+      "comments": 56,
+      "likes": 150
+    }
+  ]
+}
