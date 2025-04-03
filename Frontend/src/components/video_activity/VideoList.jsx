@@ -15,6 +15,11 @@ const VideoList = () => {
     return () => window.removeEventListener("resize", updateVisibleCount);
   }, []);
 
+  const handleShowAll=()=>{
+   setShowAll(true);
+
+  }
+
   // Function to update visible videos based on screen width
   const updateVisibleCount = () => {
     if (window.innerWidth >= 1024) {
@@ -27,7 +32,7 @@ const VideoList = () => {
   };
 
   return (
-    <div className="bg-green-700 min-h-screen p-8">
+    <div className="bg-white min-h-screen p-8">
       <h1 className="text-3xl font-bold text-white text-center mb-6">
         Recent Press Conference
       </h1>
@@ -43,8 +48,8 @@ const VideoList = () => {
       {!showAll && videos.length > visibleCount && (
         <div className="flex justify-center mt-6">
           <button
-            className="bg-white text-green-700 px-4 py-2 rounded-lg shadow-md hover:bg-gray-200 transition"
-            onClick={() => setShowAll(true)}
+            className="bg-green-700 text-black  px-4 py-2 text-2xl rounded-lg shadow-md hover:bg-green-800 transition"
+            onClick={() => handleShowAll(true)}
           >
             View All
           </button>

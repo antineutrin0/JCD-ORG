@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import blogData from "./blogData.json";
 import BlogCard from "./BlogCard";
+import blogData from "./blogData.json"; // Assuming you have a JSON file with blog data
 import { Slider, Typography, Box } from "@mui/material";
 import { LuCircleArrowLeft } from "react-icons/lu";
 import { LuCircleArrowRight } from "react-icons/lu";
 const BlogPagination = () => {
-  const [blogsPerPage,setBlogsPerPage] = useState(3); // Number of blogs per page
+  const [newsPerPage,setNewsPerPage] = useState(3); // Number of blogs per page
   const [currentPage, setCurrentPage] = useState(0);
   const [visibleBlogs, setVisibleBlogs] = useState([]);
   const [sliderValue, setSliderValue] = useState(0);
@@ -14,11 +14,11 @@ const BlogPagination = () => {
   const updateBlogsPerPage = () => {
     const width = window.innerWidth;
     if (width >= 1024) {
-      setBlogsPerPage(3); // Large screens (lg)
+      setNewsPerPage(3); // Large screens (lg)
     } else if (width >= 768) {
-      setBlogsPerPage(2); // Medium screens (md)
+      setNewsPerPage(2); // Medium screens (md)
     } else {
-      setBlogsPerPage(1); // Small screens (sm)
+      setNewsPerPage(1); // Small screens (sm)
     }
   };
 
@@ -32,8 +32,8 @@ const BlogPagination = () => {
 
   // Update visible blogs when page changes
   useEffect(() => {
-    const startIndex = currentPage * blogsPerPage;
-    const endIndex = startIndex + blogsPerPage;
+    const startIndex = currentPage * newsPerPage;
+    const endIndex = startIndex + newsPerPage;
     setVisibleBlogs(blogData.blogs.slice(startIndex, endIndex));
   }, [currentPage]);
 
@@ -51,7 +51,7 @@ const BlogPagination = () => {
     let interval;
     if (expandedCards.length === 0) {
       interval = setInterval(() => {
-        setCurrentPage((prevPage) => (prevPage + 1) % Math.floor(blogData.blogs.length / blogsPerPage));
+        setCurrentPage((prevPage) => (prevPage + 1) % Math.floor(blogData.blogs.length / newsPerPage));
       }, 3000); // Auto-scroll speed when no cards are expanded
     }
     return () => clearInterval(interval);
@@ -84,7 +84,7 @@ const BlogPagination = () => {
   <button
     onClick={() =>
       setCurrentPage((prevPage) =>
-        Math.min(prevPage + 1, Math.ceil(blogData.blogs.length / blogsPerPage) - 1)
+        Math.min(prevPage + 1, Math.ceil(blogData.blogs.length / newsPerPage) - 1)
       )
     }
     className="p-2 rounded-full text-gray-700 hover:text-green-600 transition"

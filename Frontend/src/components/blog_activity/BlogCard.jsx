@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router";
 
 const BlogCard = ({ blog, onExpand }) => {
   const [expanded, setExpanded] = useState(false);
@@ -31,12 +32,14 @@ const BlogCard = ({ blog, onExpand }) => {
       </div>
 
       {/* Card Image */}
-      <img
+     <Link to={`/blogs/${blog.id}`} className="block">
+     <img
         src={blog.image}
         alt={blog.title}
         className="w-full  h-60 lg:h-96  hover:scale-110 transition-transform duration-300 ease-in-out"
       />
 
+     </Link>
       {/* Card Content */}
       <div className={` ${expanded ? "p-0":"p-4"}`}>
         <p className={`text-White ${expanded && 'hidden'}`}>

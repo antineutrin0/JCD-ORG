@@ -8,18 +8,59 @@ import Home from './Home';
 import ActivityPage from './components/Activities/ActivitesPage';
 import AboutUs from './components/AboutUs/AboutUs';
 import Notice from './components/notice/Notice';
+import VideoList from './components/video_activity/VideoList';
+import SingleBlog from './components/blog_activity/SingleBlog';
+import BlogList from './components/blog_activity/BlogList';
+import SingleNews from './components/news_activity/SingleNews';
+import NewsList from './components/news_activity/NewsList';
+import NoticeHero from './components/notice/NoticeHero';
+
+// const isLoggedIn = window.localStorage.getItem("loggedIn"); 
+// const userType = window.localStorage.getItem("userType");
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <LanguageProvider>
     <BrowserRouter>
       <Routes>
+      {/* {!isLoggedIn && (
+            <>
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<SignUp />} />
+            </>
+          )}
+
+           <Route element={<ProtectedRoute />}>
+            <Route path="/login" element={<Navigate to="/" />} />
+            <Route path="/register" element={<Navigate to="/" />} />
+            {userType != "Admin" ? (
+              <>
+                <Route path="/admin-dashboard" element={<Navigate to="/" />} />
+              </>
+            ) : (
+              <>
+                <Route path="/" element={<Navigate to="/admin-dashboard" />} />
+                <Route path="/admin-dashboard" element={<AdminHome />} />
+              </>
+            )}
+          </Route> */}
+      
         <Route path='/' element={<App />}>
           {/* This will render Home for the root route */}
-          <Route index element={<Home />} />
-          <Route path='/activity' element={<ActivityPage></ActivityPage>}></Route>
-          <Route path='/aboutus' element={<AboutUs></AboutUs>}></Route>
-          <Route path='/notice' element={<Notice></Notice>}></Route>
+          <Route index element={<Home />} /> 
+          <Route path='/blogs' element={<BlogList/>}/>
+          <Route path='/blogs/:id' element={<SingleBlog/>}></Route>
+           <Route path='/videos' element={<VideoList/>}/>
+          <Route path='/news' element={<NewsList/>}/>
+          <Route path='/news/:id' element={<SingleNews/>}></Route>
+          <Route path='/notices' element={<NoticeHero></NoticeHero>}></Route>
+          {/* <Route path='/activity' element={<ActivityPage></ActivityPage>}></Route>
+          
+          <Route path='/notices/:id' element={<singleNotice></singleNotice>}></Route>
+c           */}
+
         </Route>
+        <Route path='/about' element={<AboutUs></AboutUs>}></Route>
+        {/* <Route path='/contactus' element={<ContactUs></ContactUs>}></Route> */}
       </Routes>
     </BrowserRouter>
   </LanguageProvider>
