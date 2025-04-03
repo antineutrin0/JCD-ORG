@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem, Button, Drawer, List, ListItem, ListItemText, useScrollTrigger, Slide } from "@mui/material";
+import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem, Button, Drawer, List, ListItem, ListItemText, useScrollTrigger, Slide, Link } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import TopNavbar from "./TopNavbar";
+import { NavLink } from "react-router";
 
 function HideOnScroll({ children }) {
   const trigger = useScrollTrigger({ threshold: 50 });
@@ -12,6 +13,7 @@ function HideOnScroll({ children }) {
     </Slide>
   );
 }
+
 
 const MainNavbar= () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -47,8 +49,9 @@ const MainNavbar= () => {
 
             {/* Desktop Menu */}
             <div className="desktop-menu" style={{ display: "flex", alignItems: "center" }}>
-              <Button color="inherit">Home</Button>
-              <Button color="inherit">About</Button>
+            <Button color="inherit"> <NavLink to="/">Home</NavLink> </Button>
+               <Button color="inherit"> <NavLink to="/aboutus">About Us</NavLink></Button>
+    
               <Button color="inherit" onClick={handleMenuOpen} endIcon={<ArrowDropDownIcon />}>
                 Services
               </Button>
@@ -70,9 +73,7 @@ const MainNavbar= () => {
                 <ListItem button>
                   <ListItemText primary="Home" />
                 </ListItem>
-                <ListItem button>
-                  <ListItemText primary="About" />
-                </ListItem>
+                
                 <ListItem button>
                   <ListItemText primary="Services" />
                 </ListItem>

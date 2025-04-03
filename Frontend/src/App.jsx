@@ -3,13 +3,17 @@ import MainNavbar from './components/MainNavbar';
 import Footer from './components/Footer';
 import { Outlet } from 'react-router';
 import BlogPagination from './components/blog_activity/BlogPagination';
+import AboutHero from './components/AboutUs/AboutHero';
 
 
 function App() {
   return (
      <> 
      <MainNavbar></MainNavbar>
+     
+
      <Outlet></Outlet>
+
      <Bd_map></Bd_map>
      <BlogPagination></BlogPagination>
      <Footer></Footer>

@@ -6,9 +6,9 @@ import Footer from '../Footer'
 function AboutUs() {
   return (
     <div>
-        <TopNavbar></TopNavbar>
+      
         <Hero></Hero>
-        <Footer></Footer>
+       
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from "../../assets/Images/logo.png";
+import AboutUsContent from './AboutUsContent';
 
 function AboutHero() {
     const sections = [
@@ -43,6 +44,7 @@ function AboutHero() {
                     regardless of their ethnicity, gender, or race.
                 </p>
             </section>
+            <AboutUsContent></AboutUsContent>
 
             <section className="flex justify-center gap-5 p-5 flex-wrap">
                 {sections.map((section, index) => (
