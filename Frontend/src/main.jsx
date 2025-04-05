@@ -14,6 +14,7 @@ import BlogList from './components/blog_activity/BlogList';
 import SingleNews from './components/news_activity/SingleNews';
 import NewsList from './components/news_activity/NewsList';
 import NoticeHero from './components/notice/NoticeHero';
+import SingleActivity from './components/Activities/SingleActitvity';
 
 // const isLoggedIn = window.localStorage.getItem("loggedIn"); 
 // const userType = window.localStorage.getItem("userType");
@@ -53,10 +54,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/news' element={<NewsList/>}/>
           <Route path='/news/:id' element={<SingleNews/>}></Route>
           <Route path='/notices' element={<NoticeHero></NoticeHero>}></Route>
-          {/* <Route path='/activity' element={<ActivityPage></ActivityPage>}></Route>
+          <Route path='/activities/recent' element={<ActivityPage></ActivityPage>}></Route>
+          <Route path='/activities/recent/:id' element={<SingleActivity></SingleActivity>}></Route>
           
-          <Route path='/notices/:id' element={<singleNotice></singleNotice>}></Route>
-c           */}
+         
 
         </Route>
         <Route path='/about' element={<AboutUs></AboutUs>}></Route>

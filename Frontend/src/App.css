@@ -1,9 +1,4 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+
 
 .logo {
   height: 6em;
@@ -39,4 +34,9 @@
 
 .read-the-docs {
   color: #888;
+}
+svg {
+  width: auto; /* or specific size like 24px, 32px, etc. */
+  height: auto; /* keeps the aspect ratio intact */
+  max-width: 100%;
 }

@@ -7,12 +7,14 @@ import AboutUsHome from './components/AboutUs/AboutUsHome';
 import NewsSlider from './components/news_activity/NewsSlider';
 import BlogPagination from './components/blog_activity/BlogPagination';
 import VideoList from './components/video_activity/VideoList';
+import ActitvityHome from './components/Activities/ActitvityHome';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <NoticeCarousel />
+      <ActitvityHome></ActitvityHome>
       <AboutUsHome />
       <NewsSlider />
       <Bd_map />

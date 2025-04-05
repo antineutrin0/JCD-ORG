@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardMedia, CardActions, Typography, Button } from '@mui/material';
+import { Link } from 'react-router';
 
 const ActivityCard = ({ title, description, date, imageUrl }) => {
   return (
@@ -20,7 +21,7 @@ const ActivityCard = ({ title, description, date, imageUrl }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" color="primary">Learn More</Button>
+        <Link to="activities/recent/1" size="small" color="primary">Learn More</Link>
       </CardActions>
     </Card>
   );
