@@ -56,11 +56,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/notices' element={<NoticeHero></NoticeHero>}></Route>
           <Route path='/activities/recent' element={<ActivityPage></ActivityPage>}></Route>
           <Route path='/activities/recent/:id' element={<SingleActivity></SingleActivity>}></Route>
-          
+          <Route path='/aboutus' element={<AboutUs></AboutUs>}></Route>
          
 
         </Route>
-        <Route path='/about' element={<AboutUs></AboutUs>}></Route>
+        
         {/* <Route path='/contactus' element={<ContactUs></ContactUs>}></Route> */}
       </Routes>
     </BrowserRouter>

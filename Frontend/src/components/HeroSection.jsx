@@ -13,16 +13,18 @@ export default function HeroSection() {
         interval={3000} // Auto-play interval
         swipeable={true} // Enables swipe navigation on mobile
         emulateTouch={true} // Allows touch gestures
-        dynamicHeight={true} // Dynamically adjusts the height based on content
-        axis="horizontal" // Ensure horizontal direction
+        dynamicHeight={true} 
+        showThumbs={false}
+        // Dynamically adjusts the height based on content
+        axis="horizontal"// Ensure horizontal direction
       >
         <div>
           <img src="slide1.jpg" alt="Slide 1" />
-          <p className="legend">Legend 1</p>
+       
         </div>
         <div>
           <img src="slide2.jpg" alt="Slide 2" />
-          <p className="legend">Legend 2</p>
+        
         </div>
       
       </Carousel>
