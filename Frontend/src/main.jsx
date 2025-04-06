@@ -7,14 +7,14 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import Home from './Home';
 import ActivityPage from './components/Activities/ActivitesPage';
 import AboutUs from './components/AboutUs/AboutUs';
-import Notice from './components/notice/Notice';
 import VideoList from './components/video_activity/VideoList';
 import SingleBlog from './components/blog_activity/SingleBlog';
 import BlogList from './components/blog_activity/BlogList';
 import SingleNews from './components/news_activity/SingleNews';
-import NewsList from './components/news_activity/NewsList';
-import NoticeHero from './components/notice/NoticeHero';
+import NewsList from './components/news_activity/NewsList';;
 import SingleActivity from './components/Activities/SingleActitvity';
+import SingleCommetee from './components/Commetee.page/singleCommetee';
+import CommeteePage from './components/Commetee.page/CommeteePage';
 
 // const isLoggedIn = window.localStorage.getItem("loggedIn"); 
 // const userType = window.localStorage.getItem("userType");
@@ -53,10 +53,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
            <Route path='/videos' element={<VideoList/>}/>
           <Route path='/news' element={<NewsList/>}/>
           <Route path='/news/:id' element={<SingleNews/>}></Route>
-          <Route path='/notices' element={<NoticeHero></NoticeHero>}></Route>
           <Route path='/activities/recent' element={<ActivityPage></ActivityPage>}></Route>
           <Route path='/activities/recent/:id' element={<SingleActivity></SingleActivity>}></Route>
           <Route path='/aboutus' element={<AboutUs></AboutUs>}></Route>
+          <Route path='/committee' element={<CommeteePage></CommeteePage>}></Route>
+          <Route path='/committee/:id' element={<SingleCommetee></SingleCommetee>}></Route>
          
 
         </Route>

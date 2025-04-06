@@ -3,6 +3,7 @@ import NewsCard from "./NewsCard";
 import NewsPagination from "./NewsPagination";
 import { Link } from "react-router";
 import newsData from "./newsData.json"; // Assuming you have a data file with news data
+import SectionTitle from "../SectionTitle";
 
 const NewsSlider = () => {
   const [index, setIndex] = useState(0);
@@ -37,8 +38,9 @@ const NewsSlider = () => {
   }, [slidesToShow]);
 
   return (
-    <div className="bg-blue-200 p-6 rounded-lg overflow-hidden">
-      <h2 className="text-2xl font-bold mb-4">Recent News</h2>
+    <div className="my-20 mx-auto max-w-7xl">
+    <div className=" p-6 rounded-lg overflow-hidden">
+      <SectionTitle title="Recent News & Press Release"></SectionTitle>
       <div className=" relative w-full overflow-hidden">
         <div
           className="flex transition-transform duration-1000 ease-in-out"
@@ -53,7 +55,9 @@ const NewsSlider = () => {
           ))}
         </div>
       </div>
+      
       <NewsPagination currentIndex={index} total={newsData.news.length - slidesToShow + 1} goToSlide={setIndex} />
+    </div>
     </div>
   );
 };

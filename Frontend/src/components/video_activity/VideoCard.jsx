@@ -3,7 +3,7 @@ import { FaYoutube } from "react-icons/fa"; // Import YouTube icon
 const VideoCard = ({ video, onClick }) => {
   return (
     <div
-      className="relative bg-green-900 hover:bg-green-700 rounded-lg shadow-lg overflow-hidden cursor-pointer"
+      className="relative  hover:bg-gray-100 rounded-lg shadow-lg overflow-hidden cursor-pointer"
       onClick={() => onClick(video.videoId)}
     >
       {/* Thumbnail Image */}
@@ -24,7 +24,7 @@ const VideoCard = ({ video, onClick }) => {
       {/* Video Details */}
       <div className="p-4">
         <h3 className="font-semibold text-lg">{video.title}</h3>
-        <p className="text-gray-200">{video.date}</p>
+        <p className="text-gray-500">{video.date}</p>
       </div>
     </div>
   );

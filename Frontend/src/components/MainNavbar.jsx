@@ -15,7 +15,7 @@ function HideOnScroll({ children }) {
 }
 
 
-const MainNavbar= () => {
+const MainNavbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -33,15 +33,15 @@ const MainNavbar= () => {
 
   return (
     <>
-    
+
 
       <HideOnScroll>
-     
-        <AppBar position="fixed" sx={{ backgroundColor: "#eeeeee",color:"black" }}>
-            <TopNavbar></TopNavbar>
-        
+
+        <AppBar position="fixed" sx={{ backgroundColor: "#eeeeee", color: "black" }}>
+          <TopNavbar></TopNavbar>
+
           <Toolbar >
-         
+
             {/* Logo */}
             <Typography variant="h6" sx={{ flexGrow: 1 }}>
               <img src="logo.png" className="h-16 p-2" alt="" />
@@ -49,15 +49,37 @@ const MainNavbar= () => {
 
             {/* Desktop Menu */}
             <div className="desktop-menu" style={{ display: "flex", alignItems: "center" }}>
-            <Button color="inherit"> <NavLink to="/">Home</NavLink> </Button>
-               <Button color="inherit"> <NavLink to="/aboutus">About Us</NavLink></Button>
-    
+              <Button color="inherit"> <NavLink to="/">Home</NavLink> </Button>
+              <Button color="inherit"> <NavLink to="/aboutus">About Us</NavLink></Button>
+
               <Button color="inherit" onClick={handleMenuOpen} endIcon={<ArrowDropDownIcon />}>
-                Services
+                Committee
               </Button>
               <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-                <MenuItem onClick={handleMenuClose}>Web Development</MenuItem>
-                <MenuItem onClick={handleMenuClose}>App Development</MenuItem>
+                {/* Central Committee */}
+                <MenuItem onClick={handleMenuClose}>
+                  <NavLink to="#">Central Committee</NavLink>
+                </MenuItem>
+
+                {/* District Committee */}
+                <MenuItem onClick={handleMenuClose}>
+                  <NavLink to="#">District Committee</NavLink>
+                </MenuItem>
+
+                {/* University Units */}
+                <MenuItem onClick={handleMenuClose}>
+                  <NavLink to="/committee">Public University Unit</NavLink>
+                </MenuItem>
+                <MenuItem onClick={handleMenuClose}>
+                  <NavLink to="#">Private University Unit</NavLink>
+                </MenuItem>
+                <MenuItem onClick={handleMenuClose}>
+                  <NavLink to="#">Govt. College Unit</NavLink>
+                </MenuItem>
+                <MenuItem onClick={handleMenuClose}>
+                  <NavLink to="#">Medical College Unit</NavLink>
+                </MenuItem>
+
               </Menu>
               <Button color="inherit">Contact</Button>
             </div>
@@ -73,7 +95,7 @@ const MainNavbar= () => {
                 <ListItem button>
                   <ListItemText primary="Home" />
                 </ListItem>
-                
+
                 <ListItem button>
                   <ListItemText primary="Services" />
                 </ListItem>
@@ -83,9 +105,9 @@ const MainNavbar= () => {
               </List>
             </Drawer>
           </Toolbar>
-          
+
         </AppBar>
-        
+
       </HideOnScroll>
       <Toolbar /> {/* Push content below AppBar */}
     </>
