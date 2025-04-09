@@ -1,0 +1,105 @@
+{
+    "districts": [
+      {
+        "id": "sylhet",
+        "name": "Sylhet",
+        "committee": "Sylhet District Chhatra Dal Committee",
+        "members": [
+          "President: Arafat Hossain",
+          "General Secretary: Imran Ahmed",
+          "Organizing Secretary: Limon Mia"
+        ],
+        "achievements": [
+          "Organized regional youth conferences",
+          "Implemented scholarship programs for underprivileged students"
+        ],
+        "activities": [
+          "Protests for student rights",
+          "Blood donation campaigns"
+        ],
+        "mission": "Empower youth through education and activism in Sylhet.",
+        "vision": "To build a progressive and aware student community in Sylhet."
+      },
+      {
+        "id": "dhaka",
+        "name": "Dhaka",
+        "committee": "Dhaka Metropolitan Chhatra Dal Committee",
+        "members": [
+          "President: Fahim Rahman",
+          "General Secretary: Nayeem Islam",
+          "Organizing Secretary: Shuvo Khan"
+        ],
+        "achievements": [
+          "Launched city-wide awareness drives",
+          "Hosted leadership training programs"
+        ],
+        "activities": [
+          "Rallies demanding educational reforms",
+          "Cultural events for student engagement"
+        ],
+        "mission": "Lead movements that safeguard students' welfare in the capital.",
+        "vision": "To establish a strong student voice in policy-making processes."
+      },
+      {
+        "id": "chittagong",
+        "name": "Chittagong",
+        "committee": "Chittagong District Chhatra Dal Committee",
+        "members": [
+          "President: Mahbubul Alam",
+          "General Secretary: Arif Hasan",
+          "Organizing Secretary: Tarek Aziz"
+        ],
+        "achievements": [
+          "Built community libraries",
+          "Formed campus-level student councils"
+        ],
+        "activities": [
+          "Maritime awareness workshops",
+          "Clean campus campaigns"
+        ],
+        "mission": "Promote education and social responsibility in port city campuses.",
+        "vision": "To create an informed and empowered student generation."
+      },
+      {
+        "id": "rajshahi",
+        "name": "Rajshahi",
+        "committee": "Rajshahi Chhatra Dal Committee",
+        "members": [
+          "President: Shakil Rahman",
+          "General Secretary: Jahid Hossain",
+          "Organizing Secretary: Manik Mia"
+        ],
+        "achievements": [
+          "Distributed education materials to rural schools",
+          "Launched free tuition initiatives"
+        ],
+        "activities": [
+          "Anti-drug campaigns",
+          "Human chains for educational policy change"
+        ],
+        "mission": "Ensure rural and urban student unity and support.",
+        "vision": "To uplift students in underrepresented communities."
+      },
+      {
+        "id": "khulna",
+        "name": "Khulna",
+        "committee": "Khulna District Chhatra Dal Committee",
+        "members": [
+          "President: Nazmul Hasan",
+          "General Secretary: Liton Hossain",
+          "Organizing Secretary: Rakibul Islam"
+        ],
+        "achievements": [
+          "Fundraising for flood victims",
+          "Established student health camps"
+        ],
+        "activities": [
+          "Public debates",
+          "Workshops on digital literacy"
+        ],
+        "mission": "Support students in emergencies and skill development.",
+        "vision": "To make Khulna students digitally and socially equipped."
+      }
+    ]
+  }
+  
