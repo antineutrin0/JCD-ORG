@@ -46,7 +46,12 @@ const MainNavbar = () => {
             <Typography variant="h6" sx={{ flexGrow: 1 }}>
               <img src="logo.png" className="h-16 p-2" alt="" />
             </Typography>
-
+            
+            <Typography variant="h6" sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
+              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+                <span className="text-2xl font-bold">বাংলাদেশ জাতীয়তাবাদী ছাত্রদল</span>
+               </Link>
+             </Typography>
             {/* Desktop Menu */}
             <div className="desktop-menu" style={{ display: "flex", alignItems: "center" }}>
               <Button color="inherit"> <NavLink to="/">Home</NavLink> </Button>
@@ -58,26 +63,26 @@ const MainNavbar = () => {
               <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
                 {/* Central Committee */}
                 <MenuItem onClick={handleMenuClose}>
-                  <NavLink to="#">Central Committee</NavLink>
+                  <NavLink to="/committee/central-committee">Central Committee</NavLink>
                 </MenuItem>
 
                 {/* District Committee */}
                 <MenuItem onClick={handleMenuClose}>
-                  <NavLink to="#">District Committee</NavLink>
+                  <NavLink to="/committee/district-committee">District Committee</NavLink>
                 </MenuItem>
 
                 {/* University Units */}
                 <MenuItem onClick={handleMenuClose}>
-                  <NavLink to="/committee">Public University Unit</NavLink>
+                  <NavLink to="/committee/public-university-committee">Public University Unit</NavLink>
                 </MenuItem>
                 <MenuItem onClick={handleMenuClose}>
-                  <NavLink to="#">Private University Unit</NavLink>
+                  <NavLink to="/committee/private-university-committee">Private University Unit</NavLink>
                 </MenuItem>
                 <MenuItem onClick={handleMenuClose}>
-                  <NavLink to="#">Govt. College Unit</NavLink>
+                  <NavLink to="/committee/govt-college-committee">Govt. College/Madrasha</NavLink>
                 </MenuItem>
                 <MenuItem onClick={handleMenuClose}>
-                  <NavLink to="#">Medical College Unit</NavLink>
+                  <NavLink to="/committee/medical-college-committee">Medical College Unit</NavLink>
                 </MenuItem>
 
               </Menu>

@@ -1,31 +1,19 @@
 import React, { useState } from "react";
 import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from "@mui/material";
-import { Link } from "react-router";
+import { Link, useParams } from "react-router";
 import { motion } from "framer-motion";
-
-const universities = [
-  { name: "Dhaka University", id: 1 },
-  { name: "Jahangirnagar University", id: 2 },
-  { name: "Rajshahi University", id: 3 },
-  { name: "Chittagong University", id: 4 },
-  { name: "Khulna University", id: 5 },
-  { name: "Shahjalal University of Science and Technology", id: 6 },
-  { name: "Bangladesh University of Engineering and Technology", id: 7 },
-  { name: "North South University", id: 8 },
-  { name: "BRAC University", id: 9 },
-  { name: "University of Science and Technology Chittagong", id: 10 },
-];
-
+import committee from "./committee.json"; // Adjust the path as necessary
 export default function CommeteePage() {
   const [searchTerm, setSearchTerm] = useState("");
+  const {catagory} = useParams();
 
-  const filteredUniversities = universities.filter((university) =>
-    university.name.toLowerCase().includes(searchTerm.toLowerCase())
+   const filteredCommittees = committee.filter(
+    (committee) => committee.category === catagory? committee.name.toLowerCase().includes(searchTerm.toLowerCase()): false
   );
 
   return (
     <div className="p-6 max-w-3xl mx-auto min-h-screen">
-      <h1 className="text-3xl font-bold mb-6">University Committee</h1>
+      <h1 className="text-3xl font-bold mb-6 uppercase text-center pt-6">{catagory}</h1>
       
       {/* Search Bar with Hover Effect */}
       <motion.div
@@ -48,17 +36,17 @@ export default function CommeteePage() {
         <Table className="min-w-full" aria-label="university chapters table">
           <TableHead>
             <TableRow>
-              <TableCell className="font-semibold">Name</TableCell>
-              <TableCell align="right" className="font-semibold">Action</TableCell>
+              <TableCell className="text-2xl font-semibold">List of Committee</TableCell>
+              <TableCell align="right" className="font-semibold">Explore</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {filteredUniversities.map((university) => (
+            {filteredCommittees.map((item) => (
              
               <TableRow>
-              <TableCell  align="left" className="font-semibold">{university.name}</TableCell>
+              <TableCell  align="left" className="font-semibold">{item.name}</TableCell>
               <TableCell align="right" className="font-semibold"><Link
-                      to={`/committee/${university.id}`} // Ensure the link directs to the correct page
+                      to={`/committee/${item.category}/${item.name}`} // Ensure the link directs to the correct page
                       className=" hover:text-green-700 transition-all"
                     >
                       Visit

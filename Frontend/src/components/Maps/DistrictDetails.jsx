@@ -5,7 +5,7 @@ import districtData from "./districtData.json";
 const DistrictDetails = () => {
   const { id } = useParams();
   const [district, setDistrict] = useState(null);
-
+  console.log(id);
   useEffect(() => {
     const selectedDistrict = districtData.districts.find(
       (d) => d.id.toUpperCase() === id.toUpperCase()

@@ -13,8 +13,9 @@ import BlogList from './components/blog_activity/BlogList';
 import SingleNews from './components/news_activity/SingleNews';
 import NewsList from './components/news_activity/NewsList';;
 import SingleActivity from './components/Activities/SingleActitvity';
-import SingleCommetee from './components/Commetee.page/singleCommetee';
 import CommeteePage from './components/Commetee.page/CommeteePage';
+import DistrictDetails from './components/Maps/DistrictDetails';
+import SingleCommittee from './components/Commetee.page/singleCommittee';
 
 // const isLoggedIn = window.localStorage.getItem("loggedIn"); 
 // const userType = window.localStorage.getItem("userType");
@@ -50,18 +51,17 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Home />} /> 
           <Route path='/blogs' element={<BlogList/>}/>
           <Route path='/blogs/:id' element={<SingleBlog/>}></Route>
-           <Route path='/videos' element={<VideoList/>}/>
+          <Route path='/videos' element={<VideoList/>}/>
           <Route path='/news' element={<NewsList/>}/>
           <Route path='/news/:id' element={<SingleNews/>}></Route>
           <Route path='/activities/recent' element={<ActivityPage></ActivityPage>}></Route>
           <Route path='/activities/recent/:id' element={<SingleActivity></SingleActivity>}></Route>
           <Route path='/aboutus' element={<AboutUs></AboutUs>}></Route>
-          <Route path='/committee' element={<CommeteePage></CommeteePage>}></Route>
-          <Route path='/committee/:id' element={<SingleCommetee></SingleCommetee>}></Route>
-         
-
+          <Route path='/committee/:catagory' element={<CommeteePage></CommeteePage>}></Route>
+          <Route path='/committee/:catagory/:committeename' element={<SingleCommittee></SingleCommittee>}></Route>
+          <Route path='/district/:id' element={<DistrictDetails/>}></Route>
         </Route>
-        
+      
         {/* <Route path='/contactus' element={<ContactUs></ContactUs>}></Route> */}
       </Routes>
     </BrowserRouter>

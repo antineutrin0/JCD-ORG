@@ -17,7 +17,7 @@ const Holidays = () => {
         const response = await axios.get(
           `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events`,
           {
-            params: {
+            params: { 
               key: API_KEY,
               timeMin: timeMin,
               timeMax: timeMax,

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import districtData from "./districtData.json";
 import "../../index.css";
 import { useNavigate } from "react-router-dom";
+import SectionTitle from "../SectionTitle";
 
 function Bd_map() {
   const [mapSvg, setMapSvg] = useState("");
@@ -52,6 +53,7 @@ function Bd_map() {
     } else {
       setHoverInfo(null);
     }
+    console.log(hoverInfo);
   };
 
   const handleMouseLeave = () => {
@@ -59,11 +61,14 @@ function Bd_map() {
   };
 
   return (
+  <div className="max-w-7xl mx-auto my-20">
+    <SectionTitle title="Explore Through Map"></SectionTitle>
     <div
-      className="flex flex-col md:flex-row bg-gradient-to-r from-green-900 via-green-600 to-green-500 items-stretch justify-center min-h-screen"
+      className="flex flex-col md:flex-row bg-gradient-to-r from-green-900 via-green-600 to-green-500 items-stretch justify-center min-h-screen  rounded-lg mx-auto relative overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
+          
       {/* Left Section */}
       <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8 relative">
         <h1 className="text-center text-2xl md:text-3xl lg:text-6xl font-bold mb-4 text-white">
@@ -99,6 +104,7 @@ function Bd_map() {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 }
