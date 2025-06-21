@@ -449,62 +449,15 @@
   "category": "medical-college-committee",
   "location": "Dhaka",
   "institution_name": "Dhaka Medical College",
-  "created_at": "2024-05-01T11:30:00Z",
-  "members": [
-    {
-      "name": "Tariq Aziz",
-      "designation": "Organizing Secretary",
-      "contact": "01377777777",
-      "email": "tariq.dmc@example.com",
-      "address": "Azimpur, Dhaka",
-      "photo_url": "https://randomuser.me/api/portraits/men/16.jpg",
-      "joined_at": "2024-05-05"
-    },
-    {
-      "name": "Mahbuba Sultana",
-      "designation": "President",
-      "contact": "01776543210",
-      "email": "mahbuba.dmc@example.com",
-      "address": "Lalbagh, Dhaka",
-      "photo_url": "https://randomuser.me/api/portraits/women/16.jpg",
-      "joined_at": "2024-05-06"
-    },
-    {
-      "name": "Shafayet Hossain",
-      "designation": "Vice President",
-      "contact": "01887654321",
-      "email": "shafayet.dmc@example.com",
-      "address": "Palashi, Dhaka",
-      "photo_url": "https://randomuser.me/api/portraits/men/17.jpg",
-      "joined_at": "2024-05-07"
-    },
-    {
-      "name": "Farhana Islam",
-      "designation": "General Secretary",
-      "contact": "01911223344",
-      "email": "farhana.dmc@example.com",
-      "address": "Nilkhet, Dhaka",
-      "photo_url": "https://randomuser.me/api/portraits/women/17.jpg",
-      "joined_at": "2024-05-08"
-    },
-    {
-      "name": "Rezaul Karim",
-      "designation": "Treasurer",
-      "contact": "01566778899",
-      "email": "rezaul.dmc@example.com",
-      "address": "Bakshibazar, Dhaka",
-      "photo_url": "https://randomuser.me/api/portraits/men/18.jpg",
-      "joined_at": "2024-05-09"
-    },
-    {
-      "name": "Nasrin Aktar",
-      "designation": "Media Secretary",
-      "contact": "01733445566",
-      "email": "nasrin.dmc@example.com",
-      "address": "New Paltan, Dhaka",
-      "photo_url": "https://randomuser.me/api/portraits/women/18.jpg",
-      "joined_at": "2024-05-10"
-    }
-  ]
+  "image": "https://i.ibb.co/4f1x5zj/Whats-App-Image-2025-06-16-at-01-17-19-1b3c2d8a.jpg",
+  "created_at": "2024-05-01T11:30:00Z"
+},
+{
+  "name": "pathalia union committee",
+  "category": "district-committee",
+  "location": "pathalia",
+  "institution_name": "pathalia union",
+  "image": "https://chatradal.com/wp-content/uploads/2025/02/476159548_1856382505167927_6752423528762796540_n.jpg",
+  "created_at": "2024-05-01T11:30:00Z"
 }
 ]

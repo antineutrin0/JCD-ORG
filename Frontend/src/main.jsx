@@ -16,7 +16,9 @@ import SingleActivity from './components/Activities/SingleActitvity';
 import CommeteePage from './components/Commetee.page/CommeteePage';
 import DistrictDetails from './components/Maps/DistrictDetails';
 import SingleCommittee from './components/Commetee.page/singleCommittee';
-
+import ZiaurRahman from './components/Leaders/ZiaurRahman';
+import KhaledaZia from './components/Leaders/KhaledaZia';
+import TariqueRahman from './components/Leaders/TariqueRahman';
 // const isLoggedIn = window.localStorage.getItem("loggedIn"); 
 // const userType = window.localStorage.getItem("userType");
 
@@ -60,6 +62,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/committee/:catagory' element={<CommeteePage></CommeteePage>}></Route>
           <Route path='/committee/:catagory/:committeename' element={<SingleCommittee></SingleCommittee>}></Route>
           <Route path='/district/:id' element={<DistrictDetails/>}></Route>
+          <Route path='/leaders/shaheed-president-ziaur-rahman' element={<ZiaurRahman></ZiaurRahman>}></Route>
+          <Route path='/leaders/Chairperson-Begum-Khaleda-Zia' element={<KhaledaZia></KhaledaZia>}></Route>
+          <Route path='/leaders/Acting-Chairman-Tarique-Rahman' element={<TariqueRahman></TariqueRahman>}></Route>
         </Route>
       
         {/* <Route path='/contactus' element={<ContactUs></ContactUs>}></Route> */}

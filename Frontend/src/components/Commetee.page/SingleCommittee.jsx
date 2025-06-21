@@ -32,7 +32,7 @@ export default function SingleCommittee() {
       </p>
 
       {/* Committee PDF/Image Display */}
-      {singlecommittee.pdflink && (
+      {singlecommittee.image && (
         <div className="mb-10">
           <h2 className="text-2xl font-semibold text-green-800 mb-2 text-center">
             Committee PDF/Image Copy
@@ -40,21 +40,21 @@ export default function SingleCommittee() {
           <div className="flex justify-center">
             {isPdf ? (
               <iframe
-                src={singlecommittee.pdflink}
+                src={singlecommittee.image}
                 title="Committee PDF"
                 className="w-full h-[500px] rounded-md shadow-md"
               ></iframe>
             ) : (
               <img
-                src={singlecommittee.pdflink}
+                src={singlecommittee.image}
                 alt="Committee Document"
-                className="max-w-full h-auto rounded-lg shadow-md"
+                className="max-w-full h-auto rounded-lg shadow-md mx-auto"
               />
             )}
           </div>
           <p className="text-center mt-2">
             <a
-              href={singlecommittee.pdflink}
+              href={singlecommittee.image}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 underline"
@@ -67,7 +67,7 @@ export default function SingleCommittee() {
 
       {/* Members Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {singlecommittee.members.map((member, index) => {
+        {singlecommittee.members?.map((member, index) => {
           const isImportant =
             member.designation.toLowerCase().includes('president') ||
             member.designation.toLowerCase().includes('secretary');

@@ -1,17 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const leaders = [
   {
-    name: 'Ziaur Rahman',
+    name: 'shaheed-president-ziaur-rahman',
     img: '/z.jpg',
   },
   {
-    name: 'Khaleda Zia',
+    name: 'chairperson-begum-khaleda-zia',
     img: '/k.jpg',
   },
   {
-    name: 'Tarique Rahman',
+    name: 'acting-chairman-tarique-rahman',
     img: '/t.jpg',
   },
 ];
@@ -32,9 +33,9 @@ export default function OurLeaders() {
           Valiant freedom fighters and Bangladeshi Nationalists founded the party under the leadership
           of President Ziaur Rahman in 1978
         </p>
-        <button className="bg-green-700 text-white px-6 py-2 rounded-md hover:bg-green-800 transition">
+        <Link to="/leaders/shaheed-president-ziaur-rahman" className="bg-green-700 text-white px-6 py-2 rounded-md hover:bg-green-800 transition">
           Learn More
-        </button>
+        </Link>
       </motion.div>
 
       {/* Images Section */}
@@ -46,12 +47,16 @@ export default function OurLeaders() {
         transition={{ duration: 0.5 }}
       >
         {leaders.map((leader, index) => (
-          <img
+          <Link
             key={index}
-            src={leader.img}
-            alt={leader.name}
-            className="w-36 h-44 rounded-lg object-cover shadow-lg"
-          />
+            to={`/leaders/${leader.name.toLowerCase().replace(/\s+/g, '-')}`}
+          >
+            <img
+              src={leader.img}
+              alt={leader.name}
+              className="w-36 h-44 rounded-lg object-cover shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+          </Link>
         ))}
       </motion.div>
     </section>

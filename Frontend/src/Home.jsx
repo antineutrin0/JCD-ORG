@@ -7,9 +7,8 @@ import BlogSlider from './components/blog_activity/BlogSlider';
 import VideoList from './components/video_activity/VideoList';
 import ActitvityHome from './components/Activities/ActitvityHome';
 import NoticeSection from './components/notice/NoticeSection';
-import OurLeaders from './components/OurLeader';
 import Bd_map from './components/Maps/Bd_map';
-
+import OurLeaders from './components/Leaders/OurLeader';
 export default function Home() {
   return (
     <>
