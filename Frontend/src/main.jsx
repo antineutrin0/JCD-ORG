@@ -23,7 +23,7 @@ import MissionsPage from './components/Missions/MissionsPage';
 import MissionDetails from './components/Missions/MissionDetails';
 // const isLoggedIn = window.localStorage.getItem("loggedIn"); 
 // const userType = window.localStorage.getItem("userType");
-
+import July_24 from './components/July_24/July_24';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <LanguageProvider>
     <BrowserRouter>
@@ -69,6 +69,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/leaders/Acting-Chairman-Tarique-Rahman' element={<TariqueRahman></TariqueRahman>}></Route>
           <Route path='/mission' element={<MissionsPage></MissionsPage>}></Route>
           <Route path="/missions/:id" element={<MissionDetails />} />
+          <Route path='/july-martyrs' element={<July_24></July_24>}></Route>
         </Route>
       
         {/* <Route path='/contactus' element={<ContactUs></ContactUs>}></Route> */}

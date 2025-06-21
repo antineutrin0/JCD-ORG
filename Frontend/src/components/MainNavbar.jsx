@@ -20,15 +20,26 @@ function HideOnScroll({ children }) {
 
 const MainNavbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [missionAnchorEl, setMissionAnchorEl] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
+
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
+
+  const handleMissionMenuOpen = (event) => {
+    setMissionAnchorEl(event.currentTarget);
+  };
+
+  const handleMissionMenuClose = () => {
+    setMissionAnchorEl(null);
+  };
+
 
   const toggleMobileMenu = () => {
     setMobileOpen(!mobileOpen);
@@ -60,28 +71,56 @@ const MainNavbar = () => {
             <Button color="inherit" className="font-semibold text-black hover:text-blue-600">
                     <NavLink to="/" className="text-base">Home</NavLink>
                   </Button>
+                  <Button
+                color="inherit"
+                onClick={handleMenuOpen}
+                className="font-semibold text-black "
+              >
+                Activity
+              </Button>
+              <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
+                <MenuItem onClick={handleMenuClose} component={NavLink} to="/news">
+                 News
+                </MenuItem>
+                <MenuItem onClick={handleMenuClose} component={NavLink} to="/press-release">
+                 Press Release
+                </MenuItem>
+                <MenuItem onClick={handleMenuClose} component={NavLink} to="/notice">
+                 Notice
+                </MenuItem>
+                <MenuItem onClick={handleMenuClose} component={NavLink} to="/events">
+                 Events
+                </MenuItem>
+                <MenuItem onClick={handleMenuClose} component={NavLink} to="/videos">
+                 Videos
+                </MenuItem>
+              </Menu>
 
-                  <Button color="inherit" className="font-semibold text-black hover:text-blue-600">
-                    <NavLink to="/press-release" className="text-base">Press Release</NavLink>
+              <Button
+                color="inherit"
+                onClick={handleMissionMenuOpen}
+                className="font-semibold text-black border-b-2"
+              >
+                Mission
+              </Button>
+              <Menu anchorEl={missionAnchorEl} open={Boolean(missionAnchorEl)} onClose={handleMissionMenuClose}>
+                <MenuItem onClick={handleMissionMenuClose} component={NavLink} to="/mission">31 Points</MenuItem>
+                <MenuItem onClick={handleMissionMenuClose} component={NavLink} to="/mission">19 Points</MenuItem>
+                <MenuItem onClick={handleMissionMenuClose} component={NavLink} to="/vision">Vision 2030</MenuItem>
+              
+              </Menu>
+
+              <Button color="inherit" className="font-semibold text-black hover:text-blue-600">
+                    <NavLink to="/july-martyrs" className="text-base">Committee</NavLink>
                   </Button>
-                  <Button color="inherit" className="font-semibold text-black hover:text-blue-600">
-                    <NavLink to="/mission" className="text-base">Mission</NavLink>
+              <Button color="inherit" className="font-semibold text-black hover:text-blue-600">
+                    <NavLink to="/july-martyrs" className="text-base">July-Martyrs</NavLink>
                   </Button>
+                
                   <Button color="inherit" className="font-semibold text-black hover:text-blue-600">
                     <NavLink to="/aboutus" className="text-base">About Us</NavLink>
                   </Button>
-
-                  <Button
-                    color="inherit"
-                    onClick={handleMenuOpen}
-                    className="font-semibold text-black hover:text-blue-600"
-                  >
-                    Committee
-                  </Button>
-
-                  <Button color="inherit" className="font-semibold text-black hover:text-blue-600">
-                    <NavLink to="/news" className="text-base">News</NavLink>
-                  </Button>
+                 
 
                   <Button color="inherit" className="font-semibold text-black hover:text-blue-600">
                     <NavLink to="/contact" className="text-base">Contact</NavLink>
