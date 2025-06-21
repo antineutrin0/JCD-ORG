@@ -1,5 +1,15 @@
 import React from 'react';
-import { Box, Container, Grid, Link, Typography, List, ListItem,ListItemText, ListItemIcon } from '@mui/material';
+import {
+  Box,
+  Container,
+  Grid,
+  Link,
+  Typography,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemIcon,
+} from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -7,218 +17,111 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Footer() {
   return (
-    <Box sx={{ backgroundColor: '#01523c', color: '#fff', py: 4 }}>
-      <Container>
-        <Grid container spacing={4}>
-          {/* Site Navigation - Column 1 */}
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>Site Navigation</Typography>
+    <Box sx={{ backgroundColor: '#014733', color: '#fff', py: 6 }}>
+      <Container maxWidth="lg">
+        <Grid container spacing={2} justifyContent="center">
+          {/* Navigation */}
+          <Grid item xs={12} sm={6} md={3} sx={{ px: 3 }}>
+            <Typography variant="h6" gutterBottom>
+              Navigation
+            </Typography>
             <List>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Home
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    About
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Services
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Contact
-                  </Link>
-                </ListItemText>
-              </ListItem>
+              {['Home', 'About', 'Our Leader', 'Constitution'].map((text, i) => (
+                <ListItem key={i} sx={{ px: 0, py: 0.5 }}>
+                  <ListItemText>
+                    <Link href="#" color="inherit" underline="hover">
+                      {text}
+                    </Link>
+                  </ListItemText>
+                </ListItem>
+              ))}
             </List>
           </Grid>
 
-          {/* Site Navigation - Column 2 */}
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>Company</Typography>
+          {/* Resources */}
+          <Grid item xs={12} sm={6} md={3} sx={{ px: 3 }}>
+            <Typography variant="h6" gutterBottom>
+              Resources
+            </Typography>
             <List>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Careers
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Blog
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Press
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Privacy Policy
-                  </Link>
-                </ListItemText>
-              </ListItem>
+              {['31 Points', '19 Points', 'Vision 2030'].map((text, i) => (
+                <ListItem key={i} sx={{ px: 0, py: 0.5 }}>
+                  <ListItemText>
+                    <Link href="#" color="inherit" underline="hover">
+                      {text}
+                    </Link>
+                  </ListItemText>
+                </ListItem>
+              ))}
             </List>
           </Grid>
 
-          {/* Site Navigation - Column 3 */}
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>Support</Typography>
+          {/* Latest */}
+          <Grid item xs={12} sm={6} md={3} sx={{ px: 3 }}>
+            <Typography variant="h6" gutterBottom>
+              Latest
+            </Typography>
             <List>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Help Center
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    FAQs
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Terms & Conditions
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Refund Policy
-                  </Link>
-                </ListItemText>
-              </ListItem>
-            </List>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>Support</Typography>
-            <List>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Help Center
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    FAQs
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Terms & Conditions
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Refund Policy
-                  </Link>
-                </ListItemText>
-              </ListItem>
-            </List>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>Support</Typography>
-            <List>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Help Center
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    FAQs
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Terms & Conditions
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem sx={{ padding: '0px', margin: '5px' }}>
-                <ListItemText>
-                  <Link href="#" color="inherit" underline="hover">
-                    Refund Policy
-                  </Link>
-                </ListItemText>
-              </ListItem>
+              {['Press Releases', 'News', 'Notices', 'Activities'].map((text, i) => (
+                <ListItem key={i} sx={{ px: 0, py: 0.5 }}>
+                  <ListItemText>
+                    <Link href="#" color="inherit" underline="hover">
+                      {text}
+                    </Link>
+                  </ListItemText>
+                </ListItem>
+              ))}
             </List>
           </Grid>
 
-          {/* Social Media Links */}
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>Follow Us</Typography>
-            <List className='flex  justify-start'>
-              <ListItem sx={{ padding: '0px' }}>
+          {/* Follow Us */}
+          <Grid item xs={12} sm={6} md={3} sx={{ px: 3 }}>
+            <Typography variant="h6" gutterBottom>
+              Follow Us
+            </Typography>
+            <List>
+              <ListItem sx={{ px: 0, py: 0.5 }}>
                 <ListItemIcon>
                   <FacebookIcon sx={{ color: '#fff' }} />
                 </ListItemIcon>
-                <Link href="https://facebook.com" color="inherit" underline="hover" />
+                <Link href="https://facebook.com" color="inherit" underline="hover">
+                  Facebook
+                </Link>
               </ListItem>
-              <ListItem sx={{ padding: '0px'}}>
+              <ListItem sx={{ px: 0, py: 0.5 }}>
                 <ListItemIcon>
                   <TwitterIcon sx={{ color: '#fff' }} />
                 </ListItemIcon>
-                <Link href="https://twitter.com" color="inherit" underline="hover" />
+                <Link href="https://twitter.com" color="inherit" underline="hover">
+                  Twitter
+                </Link>
               </ListItem>
-              <ListItem sx={{ padding: '0px', }}>
+              <ListItem sx={{ px: 0, py: 0.5 }}>
                 <ListItemIcon>
                   <InstagramIcon sx={{ color: '#fff' }} />
                 </ListItemIcon>
-                <Link href="https://instagram.com" color="inherit" underline="hover" />
+                <Link href="https://instagram.com" color="inherit" underline="hover">
+                  Instagram
+                </Link>
               </ListItem>
-              <ListItem sx={{ padding: '0px'}}>
+              <ListItem sx={{ px: 0, py: 0.5 }}>
                 <ListItemIcon>
                   <LinkedInIcon sx={{ color: '#fff' }} />
                 </ListItemIcon>
-                <Link href="https://linkedin.com" color="inherit" underline="hover" />
+                <Link href="https://linkedin.com" color="inherit" underline="hover">
+                  LinkedIn
+                </Link>
               </ListItem>
             </List>
           </Grid>
         </Grid>
 
-        {/* Copyright Section */}
-        <Grid item xs={12} sx={{ textAlign: 'center', mt: 2, borderTop: '2px solid #4caf50', pt: 2 }}>
+        {/* Bottom Copyright */}
+        <Box sx={{ borderTop: '1px solid #4caf50', mt: 4, pt: 2, textAlign: 'center' }}>
           <Typography variant="body2" color="inherit">
-            &copy; {new Date().getFullYear()} Your Company Name. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Your Company Name. All rights reserved.
           </Typography>
-        </Grid>
+        </Box>
       </Container>
     </Box>
   );
