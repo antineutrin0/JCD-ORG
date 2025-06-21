@@ -1,112 +1,74 @@
 {
-    "blogs": [
-      {
-        "id": 1,
-        "title": "Shrimp and Chorizo Paella",
-        "author": "R",
-        "date": "September 14, 2016",
-        "image": "https://images.unsplash.com/photo-1741800465167-0c276ad75e08?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
-        "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
-        "method": "Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10 minutes. Heat oil in a large pan, cook chicken, shrimp, and chorizo until browned. Add ingredients, simmer broth, and let rice absorb flavors. Serve hot!"
-      },
-      {
-        "id": 2,
-        "title": "Classic Margherita Pizza",
-        "author": "M",
-        "date": "August 22, 2018",
-        "image": "https://images.unsplash.com/photo-1741850821836-a0228e561406?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8",
-        "description": "A simple yet delicious Margherita pizza with fresh tomatoes, mozzarella, and basil.",
-        "method": "Preheat oven to 475°F. Roll out dough, spread sauce, add toppings, and bake for 12-15 minutes. Enjoy!"
-      },
-      {
-        "id": 3,
-        "title": "Homemade Sushi Rolls",
-        "author": "S",
-        "date": "July 5, 2019",
-        "image": "https://images.unsplash.com/photo-1742183635099-bf6d03fca5c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D",
-        "description": "Learn how to make sushi rolls at home with this easy recipe.",
-        "method": "Prepare sushi rice, cut fresh fish, roll with nori, and slice into bite-sized pieces."
-      },
-      {
-        "id": 4,
-        "title": "Chocolate Lava Cake",
-        "author": "A",
-        "date": "March 10, 2021",
-        "image": "https://images.unsplash.com/photo-1741850821875-926bc6332d97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D",
-        "description": "A rich and gooey chocolate lava cake, perfect for dessert lovers.",
-        "method": "Mix ingredients, pour into ramekins, bake at 425°F for 10-12 minutes, and serve warm."
-      },
-      {
-        "id": 5,
-        "title": "Fresh Caesar Salad",
-        "author": "L",
-        "date": "June 15, 2022",
-        "image": "https://images.unsplash.com/photo-1743031031853-15698b5b8419?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "description": "A fresh and crunchy Caesar salad with homemade dressing.",
-        "method": "Chop romaine lettuce, toss with dressing, croutons, and parmesan cheese. Serve chilled."
-      },
-      {
-        "id": 6,
-        "title": "BBQ Chicken Wings",
-        "author": "J",
-        "date": "January 5, 2023",
-        "image": "https://images.unsplash.com/photo-1694726635403-364e9f99fbd5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D",
-        "description": "Spicy and tangy BBQ chicken wings that are perfect for game night.",
-        "method": "Marinate wings, bake or fry until crispy, and coat with BBQ sauce."
-      },
-      {
-        "id": 7,
-        "title": "Avocado Toast with Egg",
-        "author": "E",
-        "date": "May 12, 2023",
-        "image": "https://images.unsplash.com/photo-1680528811837-d4e928e9ac11?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D",
-        "description": "A simple and healthy avocado toast with a perfectly cooked egg on top.",
-        "method": "Toast bread, mash avocado, top with egg, and season to taste."
-      },
-      {
-        "id": 8,
-        "title": "Classic Pancakes",
-        "author": "B",
-        "date": "September 30, 2023",
-        "image": "https://images.unsplash.com/photo-1700393289648-25e5d8231571?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "description": "Fluffy and delicious pancakes with a drizzle of maple syrup.",
-        "method": "Mix batter, cook on a hot griddle, flip until golden brown, and serve."
-      },
-      {
-        "id": 9,
-        "title": "Creamy Tomato Pasta",
-        "author": "C",
-        "date": "November 8, 2023",
-        "image": "https://images.unsplash.com/photo-1743031031853-15698b5b8419?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "description": "A creamy tomato pasta dish that is quick and easy to prepare.",
-        "method": "Cook pasta, prepare tomato sauce, mix with cream, and toss with pasta."
-      },
-      {
-        "id": 10,
-        "title": "Berry Smoothie Bowl",
-        "author": "D",
-        "date": "February 20, 2024",
-        "image": "https://images.unsplash.com/photo-1722706049551-e4d948146375?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D",
-        "description": "A refreshing and nutritious berry smoothie bowl topped with granola and fruits.",
-        "method": "Blend berries with yogurt, pour into a bowl, and add toppings."
-      },
-      {
-        "id": 11,
-        "title": "Shrimp and Chorizo Paella",
-        "author": "R",
-        "date": "September 14, 2016",
-        "image": "https://images.unsplash.com/photo-1741800465167-0c276ad75e08?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
-        "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
-        "method": "Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10 minutes. Heat oil in a large pan, cook chicken, shrimp, and chorizo until browned. Add ingredients, simmer broth, and let rice absorb flavors. Serve hot!"
-      },
-      {
-        "id": 12,
-        "title": "Classic Margherita Pizza",
-        "author": "M",
-        "date": "August 22, 2018",
-        "image": "https://images.unsplash.com/photo-1741850821836-a0228e561406?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8",
-        "description": "A simple yet delicious Margherita pizza with fresh tomatoes, mozzarella, and basil.",
-        "method": "Preheat oven to 475°F. Roll out dough, spread sauce, add toppings, and bake for 12-15 minutes. Enjoy!"
-      }
-    ]
-  }
+  "blogs": [
+    {
+      "id": 1,
+      "title": "নির্বাচনের প্রস্তুতি নেওয়ার ডাক",
+      "date": "29 MAY 2025",
+      "author": "কামরুল হাসান",
+      "image": "https://i.ibb.co/4nnsMkhY/nay-3321-1748463886.jpg",
+      "description": "বিএনপির ভারপ্রাপ্ত চেয়ারম্যান তারেক রহমান এক ভার্চুয়াল সমাবেশে দলীয় নেতাকর্মীদের ডিসেম্বরের মধ্যে জাতীয় নির্বাচনের প্রস্তুতি নিতে আহ্বান জানান এবং অন্তর্বর্তী সরকারকেও সেই সময়ের মধ্যে নির্বাচন অনুষ্ঠানের দাবি জানান। নয়াপল্টনে বিএনপির তিন অঙ্গ সংগঠনের যৌথ উদ্যোগে আয়োজিত এই বিশাল সমাবেশে হাজারো নেতাকর্মী অংশগ্রহণ করে, যা রাজধানীর বিস্তীর্ণ এলাকায় যানজট ও জনজোয়ার সৃষ্টি করে। তিনি বলেন, দেশে ফ্যাসিবাদমুক্ত, জবাবদিহিমূলক সরকার প্রতিষ্ঠা করতে জনগণের সরাসরি ভোট প্রয়োজন, আর নতুন সাড়ে তিন কোটি ভোটারকেও সে সুযোগ দিতে হবে। তিনি নির্বাচন নিয়ে সময়ক্ষেপণ ও সংস্কারের অজুহাতের সমালোচনা করে বলেন, অতীতে তিন মাসেই নির্বাচন সম্ভব হয়েছে, এখন তা ১০ মাসেও হচ্ছে না। পাশাপাশি তিনি আদালতের রায় মানা হচ্ছে না এবং বিএনপি প্রার্থী ইশরাক হোসেনের শপথে বাধা দেওয়া হচ্ছে বলে অভিযোগ করেন। সমাবেশে বিএনপির শীর্ষ নেতারা অন্তর্বর্তী সরকারের নিরপেক্ষতা নিয়ে প্রশ্ন তোলেন, সরকারের গঠনতন্ত্রবিরোধী ভূমিকা ও পচনের কথা বলেন এবং দ্রুত নির্বাচনের রোডম্যাপ প্রকাশের আহ্বান জানান। অবশেষে নেতারা হুঁশিয়ারি দেন, নির্বাচন বিলম্বিত হলে তরুণরা জবাব দেবে, আর প্রয়োজনে গণআন্দোলন গড়ে তোলা হবে।",
+      "category": "Politics",
+      "source": "Samakal.com",
+      "news_link":"https://samakal.com/politics/article/297908/%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A6%A8%E0%A7%87%E0%A6%B0-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A7%81%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A7%87%E0%A6%93%E0%A7%9F%E0%A6%BE%E0%A6%B0-%E0%A6%A1%E0%A6%BE%E0%A6%95",
+      "comments": 45,
+      "likes": 120,
+      "location": "Dhaka"
+    },
+    {
+      "id": 2,
+      "title": "উপাচার্যের কার্যালয়ের সামনে অবস্থান নিয়ে সাম্য হত্যার বিচার চাইল ঢাবি ছাত্রদল",
+      "date": "26 May 2025",
+      "author": "বিশ্ববিদ্যালয় প্রতিবেদক",
+      "image": "https://i.ibb.co/h1MC4kbj/5-1748262358.jpg",
+      "description": "Tঢাকা বিশ্ববিদ্যালয়ের (ঢাবি) শিক্ষার্থী ও ছাত্রদল নেতা শাহরিয়ার আলম সাম্য হত্যার বিচার, উপাচার্য ও প্রক্টরের পদত্যাগ এবং নিরাপদ ক্যাম্পাসের দাবিতে আজ ঢাকা বিশ্ববিদ্যালয় শাখা ছাত্রদল উপাচার্যের কার্যালয়ের সামনে অবস্থান কর্মসূচি পালন করে। দুপুর ১২টায় হাকিম চত্বর থেকে শুরু হওয়া বিক্ষোভ মিছিলের নেতৃত্ব দেন শাখার সভাপতি গণেশ চন্দ্র রায় সাহস ও সাধারণ সম্পাদক নাহিদুজ্জামান শিপন। তারা বলেন, ১৩ মে সোহরাওয়ার্দী উদ্যানে ছুরিকাঘাতে নিহত সাম্য ছিলেন গণ-আন্দোলনের সম্মুখসারির যোদ্ধা, অথচ হত্যাকাণ্ডের ১৩ দিন পরও প্রশাসন কোনো অগ্রগতি দেখাতে পারেনি। বক্তারা প্রশাসনের ব্যর্থতা ও সাম্য হত্যাকাণ্ডে ভিন্ন ন্যারেটিভ দাঁড় করানোর চেষ্টা নিয়ে ক্ষোভ প্রকাশ করেন এবং দৃষ্টান্তমূলক শাস্তির দাবি জানান। এছাড়া, সাম্প্রতিক সময়ে বিশ্ববিদ্যালয়ে ঘটে যাওয়া একাধিক সহিংস ঘটনার বিচার না হওয়ায় প্রশাসনের প্রতি অনাস্থা জানিয়ে উপাচার্য ও প্রক্টরের পদত্যাগ দাবি করেন নেতাকর্মীরা।",
+      "category": "Politics",
+      "source": "Samakal.com",
+      "news_link":"https://samakal.com/politics/article/297908/%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A6%A8%E0%A7%87%E0%A6%B0-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A7%81%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A7%87%E0%A6%93%E0%A7%9F%E0%A6%BE%E0%A6%B0-%E0%A6%A1%E0%A6%BE%E0%A6%95",
+      "comments": 60,
+      "likes": 200,
+      "location": "Dhaka"
+    },
+    {
+      "id": 3,
+      "title": "ছাত্রদলে যোগ দিলেন বৈষম্যবিরোধীর ৫ নেতা",
+      "date": "25 May 2025",
+      "author": "প্রতিবেদক, ময়মনসিংহ",
+      "image": "https://i.ibb.co/Xr2jXCBf/5-1748178703.jpg",
+      "description": "বৈষম্যবিরোধী ছাত্র আন্দোলনের ময়মনসিংহ জেলা ও মহানগর কমিটির পাঁচ নেতা ছাত্রদলে যোগ দিয়েছেন। শনিবার রাতে ময়মনসিংহ নগরীর হরিকিশোর রায় রোডে বিএনপির কার্যালয়ে মহানগর ছাত্রদলের সভায় তাদের আনুষ্ঠানিকভাবে বরণ করে নেওয়া হয়। যোগ দেওয়া নেতারা হলেন—জেলা শাখার সংগঠক কাউসার হাসান, মহানগরের সহ-মুখপাত্র রিশাদুল আলম, সদস্য ফারদিন আলম, নামি আহমেদ ও বাঁধন রহমান। রিশাদুল আলম জানান, তারা দীর্ঘদিন ধরে জাতীয়তাবাদী আদর্শে অনুপ্রাণিত হয়ে গণতান্ত্রিক আন্দোলনে সক্রিয় ছিলেন, কিন্তু নিজের ইচ্ছার বিরুদ্ধে বৈষম্যবিরোধী আন্দোলনে পদায়ন হওয়ায় পদত্যাগ করে ছাত্রদলে যোগ দিয়েছেন। অনুষ্ঠানে ছাত্রদল কেন্দ্রীয় সংসদের সহ-সভাপতি শাকির আহমেদ, যুগ্ম সাধারণ সম্পাদক মো. রিসালাত ইসলাম, মহানগর ছাত্রদলের সভাপতি গোবিন্দ রায় ও সাধারণ সম্পাদক আল মো. রাফসান সামিসহ অন্যরা উপস্থিত ছিলেন।",
+      "category": "Youth",
+      "source": "Samakal.com",
+      "news_link":"https://samakal.com/whole-country/article/297380/%E0%A6%9B%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%A6%E0%A6%B2%E0%A7%87-%E0%A6%AF%E0%A7%8B%E0%A6%97-%E0%A6%A6%E0%A6%BF%E0%A6%B2%E0%A7%87%E0%A6%A8-%E0%A6%AC%E0%A7%88%E0%A6%B7%E0%A6%AE%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%BF%E0%A6%B0%E0%A7%8B%E0%A6%A7%E0%A7%80%E0%A6%B0-%E0%A7%AB-%E0%A6%A8%E0%A7%87%E0%A6%A4%E0%A6%BE",
+      "comments": 78,
+      "likes": 350,
+      "location": "Mymensingh"
+    },
+    {
+      "id": 4,
+      "title": "সাম্য হত্যার বিচার দাবিতে শাহবাগ মোড়ে ছাত্রদলের অবস্থান",
+      "date": "22 MAy 2024",
+      "author": "বিশ্ববিদ্যালয় প্রতিবেদক",
+      "image": "https://samakal.com/media/imgAll/2025May/2-1747894404.JPG",
+      "description": "ঢাকা বিশ্ববিদ্যালয়ের শিক্ষা ও গবেষণা ইনস্টিটিউটের শিক্ষার্থী ও ছাত্রদল নেতা শাহরিয়ার আলম সাম্য হত্যার বিচারের দাবিতে আজ বৃহস্পতিবার সকাল থেকে ছাত্রদলের নেতাকর্মীরা রাজধানীর শাহবাগ ও ইন্টারকন্টিনেন্টাল মোড়ে অবস্থান কর্মসূচি পালন করছেন, যার ফলে শাহবাগ মোড় দিয়ে যান চলাচল বন্ধ হয়ে যায়। কেন্দ্রীয় সভাপতি রাকিবুল ইসলামের নেতৃত্বে সকাল ১০টায় শুরু হওয়া এ কর্মসূচিতে বিভিন্ন শাখা ও ইউনিটের নেতাকর্মীরা অংশগ্রহণ করেন এবং বিকেল ৫টা পর্যন্ত কর্মসূচি চলবে বলে জানানো হয়। ছাত্রদল জানায়, প্রশাসন হত্যাকাণ্ডের কোনো দৃশ্যমান অগ্রগতি দেখাতে ব্যর্থ হয়েছে এবং মামলার তদন্তেও গাফিলতি রয়েছে। এর আগে বুধবারও ছাত্রদল শাহরিয়ার হত্যার প্রতিবাদে প্রক্টর অফিসের সামনে অবস্থান নেয় এবং বৃহস্পতিবার শাহবাগ ও ইন্টারকন্টিনেন্টাল মোড়ে সকাল থেকে সন্ধ্যা পর্যন্ত কর্মসূচি পালনের ঘোষণা দেয়। ছাত্রদলের দপ্তর সম্পাদক জাহাঙ্গীর আলম স্বাক্ষরিত বিজ্ঞপ্তিতে বলা হয়, মূল ঘাতকসহ সব আসামির গ্রেফতার, দ্রুত বিচার ও নিরাপদ ক্যাম্পাস নিশ্চিত করাই তাদের আন্দোলনের প্রধান দাবি।",
+      "category": "রাজনীতি",
+      "source": "Samakal",
+      "news_link":"https://samakal.com/politics/article/296807/%E0%A6%B8%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AF-%E0%A6%B9%E0%A6%A4%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%9A%E0%A6%BE%E0%A6%B0-%E0%A6%A6%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%A4%E0%A7%87-%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%AC%E0%A6%BE%E0%A6%97-%E0%A6%AE%E0%A7%8B%E0%A7%9C%E0%A7%87-%E0%A6%9B%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%A6%E0%A6%B2%E0%A7%87%E0%A6%B0-%E0%A6%85%E0%A6%AC%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A6%BE%E0%A6%A8",
+      "comments": 34,
+      "likes": 90,
+      "location": "Dhaka"
+    },
+    {
+      "id": 5,
+      "title": "ঢাবিতে যানজট ও দুর্ঘটনা কমানোর উদ্যোগ ছাত্রদল নেতাকর্মীদের",
+      "date": "10 may 2025",
+      "author": "সমকাল প্রতিবেদক",
+      "image": "https://samakal.com/media/imgAll/2025May/satrodol-r-1746829312.jpg",
+      "description": "ঢাকা বিশ্ববিদ্যালয় (ঢাবি) ক্যাম্পাস এলাকায় যানজট ও দুর্ঘটনা কমানোর উদ্যোগ নিয়েছে জাতীয়তাবাদী ছাত্রদলের নেতাকর্মীরা। এরই অংশ হিসেবে শুক্রবার পলাশী বাজার এলাকায় জেব্রা ক্রসিং অঙ্কন ও দুর্ঘটনা নিরোধক ট্রাফিক সিগন্যাল স্থাপন করা হয়েছে। এসময় রিকশাচালক ও পথচারীদের মাঝে সচেতনতা সৃষ্টিতে প্লাকার্ডও বিতরণ করা হয়। ছাত্রদলের কেন্দ্রীয় সংসদের যুগ্ম সাধারণ সম্পাদক ও ঢাকা বিশ্ববিদ্যালয়ের স্যার সলিমুল্লাহ মুসলিম হল ছাত্রদলের সাবেক সাধারণ সম্পাদক মো. তরিকুল ইসলাম তারিকের নেতৃত্বে সচেতনতামূলক এ কার্যক্রম পরিচালিত হয়। এ সময় উপস্থিত ছিলেন ঢাবি শাখা ছাত্রদলের সহ-সাংগঠনিক সম্পাদক রিয়াজ উদ্দিন, আবুল কাসেম প্রধান, রাকিব হোসেন, সদস্য সাব্বির আহম্মেদ, ইদ্রিস আলী মুরাদ, সায়মনসহ হল ও বিশ্ববিদ্যালয়ের বিভিন্ন পর্যায়ের নেতাকর্মীরা।  ছাত্রদল নেতা তরিকুল ইসলাম তারিক বলেন, ‘ঢাকা বিশ্ববিদ্যালয় ক্যাম্পাসের সন্নিকটে পলাশী বাজারে সবসময় তীব্র যানজটের সৃষ্টি হয়। বিভিন্ন সময় ব্যাটারিচালিত রিকশাসহ অন্যান্য যানবাহনে দুর্ঘটনা ঘটে। সম্প্রতি আমি নিজেও ব্যাটারিচালিত রিকশা ধাক্কায় দুর্ঘটনার শিকার হই। এতে আমার হাত ও পায়ে আঘাত লাগে। এ ছাড়া ঢাবি ও বুয়েটের শিক্ষার্থীরা পলাশী মোড়ে কেনাকাটা করতে গিয়ে ভোগান্তিতে পড়েন। এসব কারণে যানজট ও দুর্ঘটনা রোধে ট্রাফিক সিগন্যাল স্থাপন ও সচেতনতা সৃষ্টির উদ্যোগ নেওয়া হয়েছে।’",
+      "category": "Activities",
+      "source": "Samakal.com",
+      "news_link":"https://samakal.com/politics/article/294750/%E0%A6%A2%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%A4%E0%A7%87-%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A6%9C%E0%A6%9F-%E0%A6%93-%E0%A6%A6%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%98%E0%A6%9F%E0%A6%A8%E0%A6%BE-%E0%A6%95%E0%A6%AE%E0%A6%BE%E0%A6%A8%E0%A7%8B%E0%A6%B0-%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A7%8B%E0%A6%97-%E0%A6%9B%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%A6%E0%A6%B2-%E0%A6%A8%E0%A7%87%E0%A6%A4%E0%A6%BE%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0",
+      "comments": 56,
+      "likes": 150,
+      "location": "Barisal"
+    }
+  ]
+}
