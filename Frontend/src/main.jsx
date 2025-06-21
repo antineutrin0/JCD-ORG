@@ -62,7 +62,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/activities/recent' element={<ActivityPage></ActivityPage>}></Route>
           <Route path='/activities/recent/:id' element={<SingleActivity></SingleActivity>}></Route>
           <Route path='/aboutus' element={<AboutUs></AboutUs>}></Route>
-          <Route path='/committee/:catagory' element={<CommeteePage></CommeteePage>}></Route>
+          <Route path='/committee/' element={<CommeteePage></CommeteePage>}></Route>
           <Route path='/committee/:catagory/:committeename' element={<SingleCommittee></SingleCommittee>}></Route>
           <Route path='/district/:id' element={<DistrictDetails/>}></Route>
           <Route path='/leaders/shaheed-president-ziaur-rahman' element={<ZiaurRahman></ZiaurRahman>}></Route>

@@ -1,14 +1,13 @@
 import React from 'react';
-import committee from './committee.json'; // Ensure this path is correct
-import { useParams } from 'react-router-dom'; // Corrected import
+import committee from './committee.json';
+import { useParams } from 'react-router-dom';
 
 export default function SingleCommittee() {
   const { committeename } = useParams();
-
-  // Normalize for URL safety
   const formattedName = decodeURIComponent(committeename).toLowerCase();
+
   const singlecommittee = committee.find(
-    item => item.name.toLowerCase() === formattedName
+    (item) => item.name.toLowerCase() === formattedName
   );
 
   if (!singlecommittee) {
@@ -19,94 +18,28 @@ export default function SingleCommittee() {
     );
   }
 
-  const isPdf = true;
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="max-w-4xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold text-center my-6 text-green-700">
         {singlecommittee.name}
       </h1>
-      <p className="text-center text-gray-600 mb-8">
-        <span className="font-semibold">Category:</span> {singlecommittee.category} |{' '}
-        <span className="font-semibold">Location:</span> {singlecommittee.location} |{' '}
-        <span className="font-semibold">Institution:</span> {singlecommittee.institution_name}
+      <p className="text-center text-gray-600 mb-8 text-lg">
+        {singlecommittee.district}, {singlecommittee.division}
       </p>
 
-      {/* Committee PDF/Image Display */}
-      {singlecommittee.image && (
-        <div className="mb-10">
-          <h2 className="text-2xl font-semibold text-green-800 mb-2 text-center">
-            Committee PDF/Image Copy
-          </h2>
-          <div className="flex justify-center">
-            {isPdf ? (
-              <iframe
-                src={singlecommittee.image}
-                title="Committee PDF"
-                className="w-full h-[500px] rounded-md shadow-md"
-              ></iframe>
-            ) : (
-              <img
-                src={singlecommittee.image}
-                alt="Committee Document"
-                className="max-w-full h-auto rounded-lg shadow-md mx-auto"
-              />
-            )}
-          </div>
-          <p className="text-center mt-2">
-            <a
-              href={singlecommittee.image}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline"
-            >
-              View/Download Document
-            </a>
-          </p>
+      {/* Display all images vertically */}
+      {singlecommittee.image?.length > 0 && (
+        <div className="flex flex-col items-center gap-6">
+          {singlecommittee.image.map((imgUrl, index) => (
+            <img
+              key={index}
+              src={imgUrl}
+              alt={`Committee Image ${index + 1}`}
+              className="w-full max-w-xl rounded-lg shadow-md"
+            />
+          ))}
         </div>
       )}
-
-      {/* Members Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {singlecommittee.members?.map((member, index) => {
-          const isImportant =
-            member.designation.toLowerCase().includes('president') ||
-            member.designation.toLowerCase().includes('secretary');
-
-          return (
-            <div
-              key={index}
-              className={`bg-white rounded-2xl shadow-md p-4 hover:shadow-lg transition duration-300 ${
-                isImportant ? 'border-4 border-green-500' : ''
-              }`}
-            >
-              <img
-                src={member.photo_url}
-                alt={member.name}
-                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h2
-                className={`text-xl font-bold text-center ${
-                  isImportant ? 'text-green-900' : 'text-green-800'
-                }`}
-              >
-                {member.name}
-              </h2>
-              <p
-                className={`text-center ${
-                  isImportant ? 'text-red-600 font-semibold' : 'text-gray-700'
-                }`}
-              >
-                {member.designation}
-              </p>
-              <div className="mt-4 text-sm text-gray-600">
-                <p><span className="font-medium">Email:</span> {member.email}</p>
-                <p><span className="font-medium">Phone:</span> {member.contact}</p>
-                <p><span className="font-medium">Address:</span> {member.address}</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
     </div>
   );
 }

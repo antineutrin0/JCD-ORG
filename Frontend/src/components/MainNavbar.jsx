@@ -111,7 +111,7 @@ const MainNavbar = () => {
               </Menu>
 
               <Button color="inherit" className="font-semibold text-black hover:text-blue-600">
-                    <NavLink to="/july-martyrs" className="text-base">Committee</NavLink>
+                    <NavLink to="/committee" className="text-base">Committee</NavLink>
                   </Button>
               <Button color="inherit" className="font-semibold text-black hover:text-blue-600">
                     <NavLink to="/july-martyrs" className="text-base">July-Martyrs</NavLink>
