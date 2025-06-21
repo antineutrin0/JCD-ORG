@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './i18n';
 import { LanguageProvider } from './context/LanguageProvider';
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import ActivityPage from './components/Activities/ActivitesPage';
 import AboutUs from './components/AboutUs/AboutUs';
@@ -19,6 +19,8 @@ import SingleCommittee from './components/Commetee.page/singleCommittee';
 import ZiaurRahman from './components/Leaders/ZiaurRahman';
 import KhaledaZia from './components/Leaders/KhaledaZia';
 import TariqueRahman from './components/Leaders/TariqueRahman';
+import MissionsPage from './components/Missions/MissionsPage';
+import MissionDetails from './components/Missions/MissionDetails';
 // const isLoggedIn = window.localStorage.getItem("loggedIn"); 
 // const userType = window.localStorage.getItem("userType");
 
@@ -54,8 +56,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/blogs' element={<BlogList/>}/>
           <Route path='/blogs/:id' element={<SingleBlog/>}></Route>
           <Route path='/videos' element={<VideoList/>}/>
-          <Route path='/news' element={<NewsList/>}/>
-          <Route path='/news/:id' element={<SingleNews/>}></Route>
+          <Route path='/press-release' element={<NewsList/>}/>
+          <Route path='/press-release/:id' element={<SingleNews/>}></Route>
           <Route path='/activities/recent' element={<ActivityPage></ActivityPage>}></Route>
           <Route path='/activities/recent/:id' element={<SingleActivity></SingleActivity>}></Route>
           <Route path='/aboutus' element={<AboutUs></AboutUs>}></Route>
@@ -65,6 +67,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/leaders/shaheed-president-ziaur-rahman' element={<ZiaurRahman></ZiaurRahman>}></Route>
           <Route path='/leaders/Chairperson-Begum-Khaleda-Zia' element={<KhaledaZia></KhaledaZia>}></Route>
           <Route path='/leaders/Acting-Chairman-Tarique-Rahman' element={<TariqueRahman></TariqueRahman>}></Route>
+          <Route path='/mission' element={<MissionsPage></MissionsPage>}></Route>
+          <Route path="/missions/:id" element={<MissionDetails />} />
         </Route>
       
         {/* <Route path='/contactus' element={<ContactUs></ContactUs>}></Route> */}

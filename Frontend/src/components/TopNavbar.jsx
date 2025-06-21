@@ -26,7 +26,7 @@ const TopNavbar = () => {
       }}
     >
       <Toolbar sx={{ minHeight: "unset", width: "100%", justifyContent: "flex-end", gap: 2 }}>
-        <Button color="inherit" sx={{ fontSize: { xs: "0.8rem", sm: "1rem" }, textTransform: "none" }}>
+        {/* <Button color="inherit" sx={{ fontSize: { xs: "0.8rem", sm: "1rem" }, textTransform: "none" }}>
           Join Us
         </Button>
         <Button color="inherit" sx={{ fontSize: { xs: "0.8rem", sm: "1rem" }, textTransform: "none" }}>
@@ -43,7 +43,7 @@ const TopNavbar = () => {
         <Menu anchorEl={languageMenu} open={Boolean(languageMenu)} onClose={handleLanguageMenuClose}>
           <MenuItem onClick={handleLanguageMenuClose}>বাংলা</MenuItem>
           <MenuItem onClick={handleLanguageMenuClose}>English</MenuItem>
-        </Menu>
+        </Menu> */}
       </Toolbar>
     </Box>
   );

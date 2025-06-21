@@ -48,7 +48,7 @@ const NewsSlider = () => {
         >
           {newsData.news.map((news) => (
             <div key={news.id} className={`w-1/${slidesToShow} flex-shrink-0`}>
-             <Link to={`/news/${news.id}`}>
+             <Link to={`/press-release/${news.id}`}>
                 <NewsCard news={news} />
               </Link>
             </div>
