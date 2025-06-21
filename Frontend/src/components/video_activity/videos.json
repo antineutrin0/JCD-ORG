@@ -1,75 +1,52 @@
 {
-    "videos": [
-      {
-        "id": "1",
-        "title": "Shri Rahul Gandhi, Leader of Opposition (Lok Sabha), addressed the media at Parliament House",
-        "thumbnail": "https://img.youtube.com/vi/dGcsHMXbSOA/maxresdefault.jpg",
-        "videoId": "dGcsHMXbSOA",
-        "date": "26 Mar 2025"
-      },
-      {
-        "id": "2",
-        "title": "Shri Rahul Gandhi's address | Parliament March at Jantar Mantar | New Delhi",
-        "thumbnail": "https://img.youtube.com/vi/mr15Xzb1Ook/maxresdefault.jpg",
-        "videoId": "mr15Xzb1Ook",
-        "date": "24 Mar 2025"
-      },
-      {
-        "id": "3",
-        "title": "जाति, भेदभाव और शिक्षा: Professor Thorat के साथ चर्चा | Rahul Gandhi",
-        "thumbnail": "https://img.youtube.com/vi/W6NZfCO5SIk/maxresdefault.jpg",
-        "videoId": "W6NZfCO5SIk",
-        "date": "20 Mar 2025"
-      },
-      {
-        "id": "4",
-        "title": "Rahul Gandhi speaks at Cambridge University on democracy and politics",
-        "thumbnail": "https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg",
-        "videoId": "jNQXAC9IVRw",
-        "date": "15 Mar 2025"
-      },
-      {
-        "id": "5",
-        "title": "Rahul Gandhi's Bharat Jodo Yatra - Full Speech from New Delhi",
-        "thumbnail": "https://img.youtube.com/vi/kJQP7kiw5Fk/maxresdefault.jpg",
-        "videoId": "kJQP7kiw5Fk",
-        "date": "10 Mar 2025"
-      },
-      {
-        "id": "6",
-        "title": "Rahul Gandhi vs BJP: Heated Debate in Parliament | Full Speech",
-        "thumbnail": "https://img.youtube.com/vi/3JZ_D3ELwOQ/maxresdefault.jpg",
-        "videoId": "3JZ_D3ELwOQ",
-        "date": "05 Mar 2025"
-      },
-      {
-        "id": "7",
-        "title": "Exclusive Interview: Rahul Gandhi on Economy, Jobs & Future Vision",
-        "thumbnail": "https://img.youtube.com/vi/tgbNymZ7vqY/maxresdefault.jpg",
-        "videoId": "tgbNymZ7vqY",
-        "date": "01 Mar 2025"
-      },
-      {
-        "id": "8",
-        "title": "Rahul Gandhi meets students to discuss education policies",
-        "thumbnail": "https://img.youtube.com/vi/Hh9yZWeTmVM/maxresdefault.jpg",
-        "videoId": "Hh9yZWeTmVM",
-        "date": "26 Feb 2025"
-      },
-      {
-        "id": "9",
-        "title": "Rahul Gandhi's take on Social Media and Democracy | New Delhi Event",
-        "thumbnail": "https://img.youtube.com/vi/LXb3EKWsInQ/maxresdefault.jpg",
-        "videoId": "LXb3EKWsInQ",
-        "date": "20 Feb 2025"
-      },
-      {
-        "id": "10",
-        "title": "Rahul Gandhi visits Kerala: Interaction with Fishermen Community",
-        "thumbnail": "https://img.youtube.com/vi/0wCC3nuwPE8/maxresdefault.jpg",
-        "videoId": "0wCC3nuwPE8",
-        "date": "15 Feb 2025"
-      }
-    ]
-  }
-  
+  "videos": [
+    {
+      "id": "1",
+      "title": "Sজুবাইদা রহমান এর জন্মদিন উপলক্ষ্যে “আমরা বিএনপি পরিবার”এর উদ্যোগে দুই দিনব্যাপী বৃক্ষরোপণ কর্মসূচি",
+      "thumbnail": "https://img.youtube.com/vi/LefBYO9ZUao/maxresdefault.jpg",
+      "videoId": "LefBYO9ZUao",
+      "date": "17 june 2025",
+      "location": "Dhaka"
+    },
+    {
+      "id": "2",
+      "title": "তারেক রহমানের পক্ষ থেকে অনিক মিয়াকে বিদেশে প্রেরণের জন্য আর্থিক সহায়তা প্রদান",
+      "thumbnail": "https://img.youtube.com/vi/2MYGY3r3KBQ/hqdefault.jpg",
+      "videoId": "mr15Xzb1Ook",
+      "date": "17 june 2025",
+      "location": "Chattogram"
+    },
+    {
+      "id": "3",
+      "title": "পবিত্র ঈদুল আযহা উপলক্ষে নিম্ন আয়ের মানুষের মাঝে বিএনপি’র ঈদ উপহার বিতরণ ",
+      "thumbnail": "https://img.youtube.com/vi/ni3l-X7PiMs/hqdefault.jpg",
+      "videoId": "2MYGY3r3KBQ",
+      "date": "4 june 2025",
+      "location": "Rajshahi"
+    },
+    {
+      "id": "4",
+      "title": "ঢাকা মহানগর দক্ষিণ ছাত্রদলের পক্ষ থেকে দোয়া মাহফিল ও দুস্থদের মাঝে খাবার বিতরণ।",
+      "thumbnail": "https://img.youtube.com/vi/dSvhgwKBbCw/hqdefault.jpg",
+      "videoId": "dSvhgwKBbCw",
+      "date": "31 May 2025",
+      "location": "Dhaka"
+    },
+    {
+      "id": "5",
+      "title": "তারুণ্যের রাজনৈতিক অধিকার প্রতিষ্ঠার সমাবেশ | তারুণ্যের উত্তাল তরঙ্গ",
+      "thumbnail": "https://img.youtube.com/vi/JX3cS6rqw9w/hqdefault.jpg",
+      "videoId": "JX3cS6rqw9w",
+      "date": "24 May 2025",
+      "location": "Khulna"
+    },
+    {
+      "id": "6",
+      "title": "বেগম খালেদা জিয়া'র বক্তব্য | শহীদ জিয়ার ৪৪তম শাহাদৎবার্ষিকীর আলোচনা সভা ",
+      "thumbnail": "https://img.youtube.com/vi/w_eCG8sMdHA/hqdefault.jpg",
+      "videoId": "w_eCG8sMdHA",
+      "date": "29 May 2025",
+      "location": "Khulna"
+    }
+]
+   }
