@@ -48,7 +48,7 @@ const VideoList = () => {
             </button>
             <iframe
               width="100%"
-              height="400"
+              height="500"
               src={`https://www.youtube.com/embed/${selectedVideo}`}
               frameBorder="0"
               allowFullScreen
