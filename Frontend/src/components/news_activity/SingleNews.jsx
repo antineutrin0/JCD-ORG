@@ -39,6 +39,24 @@ import { useProfile } from "../../hooks/useProfile";
 //     "userId": "N1zXgwIWg5bVHlaGWgh9jxzhQyJ3",
 //     "content": "<p><strong>This is a test press release</strong></p><p><strong><em>This will be deleted very soon. Do not worry about this.</em></strong></p>"
 // }
+
+// {
+//     "id": "Kz5tQ1Ca9QVwpSI85xNq05TAsAw2",
+//     "committeeType": "University Unit",
+//     "committeeName": "শাবিপ্রবি ছাত্রদল - SUST Chatrodol ",
+//     "instituteName": "Shahjalal University of Science and Technology",
+//     "updatedAt": {
+//         "seconds": 1750622178,
+//         "nanoseconds": 972000000
+//     },
+//     "district": "Sylhet",
+//     "createdAt": {
+//         "seconds": 1750622179,
+//         "nanoseconds": 596000000
+//     },
+//     "userId": "Kz5tQ1Ca9QVwpSI85xNq05TAsAw2",
+//     "committeeFormationNoticeUrl": ""
+// }
 const SingleNews = () => {
   const shareUrl = window.location.href; // Current page URL for sharing
   const title =
@@ -71,16 +89,45 @@ const SingleNews = () => {
     <div className="w-full bg-gray-100 min-h-screen py-10">
       <div className="max-w-3xl mx-auto bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden p-6">
         {/* Breadcrumb */}
-  
-        {/* Title & Social Media */}
-        <div className="flex items-center justify-between mb-4 h-full">
-          <div className="w-2/3 md:w-3/4 lg:w-4/5">
-            <h2 className="text-2xl font-bold mb-2">{news.title}</h2>
-            <p className="text-gray-500 text-sm">
-              {new Date(news.createdAt.seconds * 1000).toLocaleDateString()}
-            </p>
+        <div className="flex items-center  w-full justify-between gap-2 mb-4">
+          <label>
+            {new Date(news.createdAt.seconds * 1000).toDateString()}
+          </label>
+
+          <div className="flex items-center gap-2">
+            <FacebookShareButton url={shareUrl} quote={title}>
+              <FacebookIcon size={25} round />
+            </FacebookShareButton>
+
+            <TwitterShareButton url={shareUrl} title={title}>
+              <TwitterIcon size={25} round />
+            </TwitterShareButton>
+
+            <WhatsappShareButton url={shareUrl} title={title} separator=" - ">
+              <WhatsappIcon size={25} round />
+            </WhatsappShareButton>
+
+            <LinkedinShareButton url={shareUrl} title={title}>
+              <LinkedinIcon size={25} round />
+            </LinkedinShareButton>
           </div>
-          
+        </div>
+
+        {/* Title & Social Media */}
+
+        <div className="w-full mb-4">
+          <h2 className="text-2xl font-bold mb-2">{news.title}</h2>
+          <p className="text-gray-500 text-sm flex items-center">
+            <label>
+              Posted by{" "}
+              <span className="font-semibold">
+                {profileQuery.data?.committeeName || ""}{" "}
+                {profileQuery.data?.district
+                  ? ", " + profileQuery.data?.district
+                  : ""}
+              </span>
+            </label>
+          </p>
         </div>
 
         {/* Image */}

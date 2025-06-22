@@ -72,10 +72,10 @@ const MainNavbar = () => {
       <HideOnScroll>
         <AppBar
           position="fixed"
-          sx={{ 
-            backgroundColor: "#eeeeee", 
+          sx={{
+            backgroundColor: "#eeeeee",
             color: "black",
-            boxShadow: 2
+            boxShadow: 2,
           }}
         >
           <TopNavbar></TopNavbar>
@@ -83,14 +83,18 @@ const MainNavbar = () => {
           <Toolbar className="flex justify-between items-center px-2 sm:px-4">
             <Link to="/" style={{ textDecoration: "none", color: "black" }}>
               <div className="flex items-center">
-                <img src="/logo.png" className="h-12 sm:h-16 p-1 sm:p-2" alt="" />
+                <img
+                  src="/logo.png"
+                  className="h-12 sm:h-16 p-1 sm:p-2"
+                  alt=""
+                />
 
                 <Typography
                   variant="h6"
-                  sx={{ 
-                    flexGrow: 1, 
+                  sx={{
+                    flexGrow: 1,
                     display: { xs: "none", sm: "block" },
-                    fontSize: { sm: "1.25rem", md: "1.5rem" }
+                    fontSize: { sm: "1.25rem", md: "1.5rem" },
                   }}
                 >
                   <span className="text-lg sm:text-xl md:text-2xl font-bold">
@@ -100,9 +104,7 @@ const MainNavbar = () => {
               </div>
             </Link>
             {/* Desktop Menu - Shows from md breakpoint and above (>= 900px) */}
-            <div
-              className="desktop-menu hidden md:flex items-center space-x-1 lg:space-x-2"
-            >
+            <div className="desktop-menu hidden md:flex items-center space-x-1 lg:space-x-2">
               <Button
                 color="inherit"
                 className="font-semibold text-black hover:text-blue-600 text-sm lg:text-base"
@@ -137,6 +139,13 @@ const MainNavbar = () => {
                   to="/all-notices"
                 >
                   Notice
+                </MenuItem>
+                <MenuItem
+                  onClick={handleMenuClose}
+                  component={NavLink}
+                  to="/blogs"
+                >
+                  Blogs
                 </MenuItem>
               </Menu>
 
@@ -260,17 +269,17 @@ const MainNavbar = () => {
             </IconButton>
 
             {/* Mobile Drawer */}
-            <Drawer 
-              anchor="right" 
-              open={mobileOpen} 
+            <Drawer
+              anchor="right"
+              open={mobileOpen}
               onClose={toggleMobileMenu}
               sx={{
                 display: { xs: "block", md: "none" },
-                '& .MuiDrawer-paper': {
+                "& .MuiDrawer-paper": {
                   width: { xs: "100%", sm: 320 },
                   maxWidth: { xs: "100vw", sm: 320 },
-                  padding: 2
-                }
+                  padding: 2,
+                },
               }}
             >
               <div className="flex flex-col h-full">
@@ -280,104 +289,117 @@ const MainNavbar = () => {
                     <CloseIcon />
                   </IconButton>
                 </div>
-                
+
                 <List className="flex-1">
-                  <ListItem 
-                    button 
-                    component={NavLink} 
-                    to="/" 
+                  <ListItem
+                    button
+                    component={NavLink}
+                    to="/"
                     onClick={closeMobileMenu}
                     className="hover:bg-gray-100 rounded-lg mb-1"
                   >
-                    <ListItemText 
-                      primary="Home" 
-                      primaryTypographyProps={{ fontWeight: 'medium' }}
+                    <ListItemText
+                      primary="Home"
+                      primaryTypographyProps={{ fontWeight: "medium" }}
                     />
                   </ListItem>
 
                   {/* Activity Section */}
-                  <ListItem 
-                    button 
+                  <ListItem
+                    button
                     onClick={() => setMobileActivityOpen(!mobileActivityOpen)}
                     className="hover:bg-gray-100 rounded-lg mb-1"
                   >
-                    <ListItemText 
-                      primary="Activity" 
-                      primaryTypographyProps={{ fontWeight: 'medium' }}
+                    <ListItemText
+                      primary="Activity"
+                      primaryTypographyProps={{ fontWeight: "medium" }}
                     />
-                    <ArrowDropDownIcon 
-                      sx={{ 
-                        transform: mobileActivityOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                        transition: 'transform 0.3s'
+                    <ArrowDropDownIcon
+                      sx={{
+                        transform: mobileActivityOpen
+                          ? "rotate(180deg)"
+                          : "rotate(0deg)",
+                        transition: "transform 0.3s",
                       }}
                     />
                   </ListItem>
-                  
+
                   {mobileActivityOpen && (
                     <div className="ml-4">
-                      <ListItem 
-                        button 
-                        component={NavLink} 
-                        to="/press-release" 
+                      <ListItem
+                        button
+                        component={NavLink}
+                        to="/press-release"
                         onClick={closeMobileMenu}
                         className="hover:bg-gray-100 rounded-lg mb-1"
                       >
                         <ListItemText primary="Press Release" />
                       </ListItem>
-                      <ListItem 
-                        button 
-                        component={NavLink} 
-                        to="/all-notices" 
+                      <ListItem
+                        button
+                        component={NavLink}
+                        to="/all-notices"
                         onClick={closeMobileMenu}
                         className="hover:bg-gray-100 rounded-lg mb-1"
                       >
                         <ListItemText primary="Notice" />
                       </ListItem>
+                      <ListItem
+                        button
+                        component={NavLink}
+                        to="/blogs"
+                        onClick={closeMobileMenu}
+                        className="hover:bg-gray-100 rounded-lg mb-1"
+                      >
+                        <ListItemText primary="Blogs" />
+                      </ListItem>
                     </div>
                   )}
 
                   {/* Mission Section */}
-                  <ListItem 
-                    button 
+                  <ListItem
+                    button
                     onClick={() => setMobileMissionOpen(!mobileMissionOpen)}
                     className="hover:bg-gray-100 rounded-lg mb-1"
                   >
-                    <ListItemText 
-                      primary="Mission" 
-                      primaryTypographyProps={{ fontWeight: 'medium' }}
+                    <ListItemText
+                      primary="Mission"
+                      primaryTypographyProps={{ fontWeight: "medium" }}
                     />
-                    <ArrowDropDownIcon 
-                      sx={{ 
-                        transform: mobileMissionOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                        transition: 'transform 0.3s'
+                    <ArrowDropDownIcon
+                      sx={{
+                        transform: mobileMissionOpen
+                          ? "rotate(180deg)"
+                          : "rotate(0deg)",
+                        transition: "transform 0.3s",
                       }}
                     />
                   </ListItem>
-                  
+
                   {mobileMissionOpen && (
                     <div className="ml-4">
-                      <ListItem 
-                        button 
-                        component={NavLink} 
-                        to="/mission" 
+                      <ListItem
+                        button
+                        component={NavLink}
+                        to="/mission"
                         onClick={closeMobileMenu}
                         className="hover:bg-gray-100 rounded-lg mb-1"
                       >
                         <ListItemText primary="31 Points" />
                       </ListItem>
-                      <ListItem 
-                        button 
-                        component={NavLink} 
-                        to="/mission" 
+                      <ListItem
+                        button
+                        component={NavLink}
+                        to="/mission"
                         onClick={closeMobileMenu}
                         className="hover:bg-gray-100 rounded-lg mb-1"
                       >
                         <ListItemText primary="19 Points" />
                       </ListItem>
-                      <ListItem 
-                        button 
-                        component={NavLink} 
-                        to="/vision" 
+                      <ListItem
+                        button
+                        component={NavLink}
+                        to="/vision"
                         onClick={closeMobileMenu}
                         className="hover:bg-gray-100 rounded-lg mb-1"
                       >
@@ -386,55 +408,55 @@ const MainNavbar = () => {
                     </div>
                   )}
 
-                  <ListItem 
-                    button 
-                    component={NavLink} 
-                    to="/committee" 
+                  <ListItem
+                    button
+                    component={NavLink}
+                    to="/committee"
                     onClick={closeMobileMenu}
                     className="hover:bg-gray-100 rounded-lg mb-1"
                   >
-                    <ListItemText 
-                      primary="Committee" 
-                      primaryTypographyProps={{ fontWeight: 'medium' }}
+                    <ListItemText
+                      primary="Committee"
+                      primaryTypographyProps={{ fontWeight: "medium" }}
                     />
                   </ListItem>
 
-                  <ListItem 
-                    button 
-                    component={NavLink} 
-                    to="/july-martyrs" 
+                  <ListItem
+                    button
+                    component={NavLink}
+                    to="/july-martyrs"
                     onClick={closeMobileMenu}
                     className="hover:bg-gray-100 rounded-lg mb-1"
                   >
-                    <ListItemText 
-                      primary="July-Martyrs" 
-                      primaryTypographyProps={{ fontWeight: 'medium' }}
+                    <ListItemText
+                      primary="July-Martyrs"
+                      primaryTypographyProps={{ fontWeight: "medium" }}
                     />
                   </ListItem>
 
-                  <ListItem 
-                    button 
-                    component={NavLink} 
-                    to="/aboutus" 
+                  <ListItem
+                    button
+                    component={NavLink}
+                    to="/aboutus"
                     onClick={closeMobileMenu}
                     className="hover:bg-gray-100 rounded-lg mb-1"
                   >
-                    <ListItemText 
-                      primary="About Us" 
-                      primaryTypographyProps={{ fontWeight: 'medium' }}
+                    <ListItemText
+                      primary="About Us"
+                      primaryTypographyProps={{ fontWeight: "medium" }}
                     />
                   </ListItem>
 
-                  <ListItem 
-                    button 
-                    component={NavLink} 
-                    to="/contact" 
+                  <ListItem
+                    button
+                    component={NavLink}
+                    to="/contact"
                     onClick={closeMobileMenu}
                     className="hover:bg-gray-100 rounded-lg mb-1"
                   >
-                    <ListItemText 
-                      primary="Contact" 
-                      primaryTypographyProps={{ fontWeight: 'medium' }}
+                    <ListItemText
+                      primary="Contact"
+                      primaryTypographyProps={{ fontWeight: "medium" }}
                     />
                   </ListItem>
                 </List>

@@ -88,10 +88,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
               element={<CommeteePage></CommeteePage>}
             ></Route>
             <Route
-              path="/committee/:catagory/:committeename"
+              path="/committee/:id"
               element={<SingleCommittee></SingleCommittee>}
             ></Route>
-            <Route path="/district/:id" element={<DistrictDetails />}></Route>
+   
             <Route
               path="/leaders/shaheed-president-ziaur-rahman"
               element={<ZiaurRahman></ZiaurRahman>}
