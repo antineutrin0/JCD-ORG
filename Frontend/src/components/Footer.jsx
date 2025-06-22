@@ -119,7 +119,7 @@ export default function Footer() {
         {/* Bottom Copyright */}
         <Box sx={{ borderTop: '1px solid #4caf50', mt: 4, pt: 2, textAlign: 'center' }}>
           <Typography variant="body2" color="inherit">
-            &copy; {new Date().getFullYear()} Your Company Name. All rights reserved.
+           developed by <b>JCD SUST IT Team</b>
           </Typography>
         </Box>
       </Container>

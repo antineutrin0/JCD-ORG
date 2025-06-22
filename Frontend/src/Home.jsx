@@ -15,7 +15,7 @@ export default function Home() {
       <HeroSection />
       <OurLeaders></OurLeaders>
       <NoticeSection></NoticeSection>
-      <ActitvityHome></ActitvityHome>
+      {/* <ActitvityHome></ActitvityHome> */}
       <AboutUsHome />
       <NewsSlider />
       <Bd_map />

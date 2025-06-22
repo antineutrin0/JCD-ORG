@@ -24,14 +24,14 @@ const VideoList = () => {
       </div>
 
       {/* Link to All Videos Page */}
-      <div className="flex justify-center mt-6">
+      {/* <div className="flex justify-center mt-6">
         <Link
           to="/videos"
           className="text-green bg-green-700 text-white px-3 py-2 text-md rounded-lg shadow-md hover:bg-green-800 transition"
         >
           View All
         </Link>
-      </div>
+      </div> */}
 
       {/* Modal for Video Player */}
       {selectedVideo && (
