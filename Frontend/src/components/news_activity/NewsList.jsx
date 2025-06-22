@@ -1,69 +1,57 @@
 import React, { useState, useEffect } from "react";
 import newsData from "./newsData.json"; // Assuming you have a JSON file with blog data
 import NewsCard from "./NewsCard";
+import { usePressReleasesQuery } from "../../hooks/usePressRelease";
+import Loader from "../Loader";
 const NewsList = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [newsPerPage, setNewsPerPage] = useState(9);
-
-  useEffect(() => {
-    const updateNewsPerPage = () => {
-      if (window.innerWidth < 640) {
-        setNewsPerPage(3);
-      } else if (window.innerWidth < 1024) {
-        setNewsPerPage(6);
-      } else {
-        setNewsPerPage(9);
-      }
-    };
-
-    updateNewsPerPage();
-    window.addEventListener("resize", updateNewsPerPage);
-    return () => window.removeEventListener("resize", updateNewsPerPage);
-  }, []);
-
-  const indexOfLastNews = currentPage * newsPerPage;
-  const indexOfFirstNews = indexOfLastNews - newsPerPage;
-  const currentNews = newsData.news.slice(indexOfFirstNews, indexOfLastNews);
-  const totalPages = Math.ceil(newsData.news.length / newsPerPage);
+  const { pressReleases, pressReleasesQuery } = usePressReleasesQuery();
 
   return (
-    <div className="w-full mx-auto p-4 mt-4">
-      <h1 className="text-3xl font-bold text-center text-green-800 mb-6">Latest News</h1>
-      
+    <div className="w-full mx-auto p-4 mt-4 max-w-7xl">
+      <h1 className="text-3xl font-bold text-center text-green-800 my-6">
+        Latest News & Press Releases
+      </h1>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4">
-        {currentNews.map((news) => (
-          <NewsCard key={news.id} news={news}/>
+        {pressReleases?.map((news) => (
+          <NewsCard key={news.id} news={news} />
         ))}
       </div>
 
-      {/* Pagination Controls */}
-      <div className="flex justify-center mt-6 space-x-2 ">
-        <button
-          className={`px-4 py-2 bg-green-700 text-white rounded ${currentPage === 1 && "opacity-50 cursor-not-allowed"}`}
-          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
+      {pressReleasesQuery.isLoading ||
+        (pressReleasesQuery.isPending && (
+          <div className="flex items-center justify-center h-64">
+            <Loader />
+          </div>
+        ))}
 
-        {[...Array(totalPages)].map((_, index) => (
+      {pressReleasesQuery.hasNextPage && (
+        <div className="mt-6 text-center">
           <button
-            key={index}
-            className={`px-3 py-1 rounded ${currentPage === index + 1 ? "bg-green-900 text-white" : "bg-gray-200"}`}
-            onClick={() => setCurrentPage(index + 1)}
+            disabled={
+              !pressReleasesQuery.hasNextPage || pressReleasesQuery.isLoading
+            }
+            onClick={() => pressReleasesQuery.fetchNextPage()}
+            className="bg-green-700 hover:bg-green-800 text-white px-6 py-2 rounded-lg shadow"
           >
-            {index + 1}
+            Load More News
           </button>
-        ))}
+        </div>
+      )}
 
-        <button
-          className={`px-4 py-2 bg-green-700 text-white rounded ${currentPage === totalPages && "opacity-50 cursor-not-allowed"}`}
-          onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-          disabled={currentPage === totalPages}
-        >
-          Next
-        </button>
-      </div>
+      {!pressReleasesQuery.hasNextPage &&
+        !pressReleasesQuery.isLoading &&
+        !pressReleasesQuery.isPending && (
+          <div className="mt-6 text-center">
+            <p className="text-gray-500">No more news to load.</p>
+          </div>
+        )}
+
+      {pressReleasesQuery.isError && (
+        <div className="text-red-500 text-center mt-4">
+          Error loading news. Please try again later.
+        </div>
+      )}
     </div>
   );
 };

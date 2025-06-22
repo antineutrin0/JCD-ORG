@@ -8,7 +8,7 @@ import Home from "./Home";
 import ActivityPage from "./components/Activities/ActivitesPage";
 import AboutUs from "./components/AboutUs/AboutUs";
 import VideoList from "./components/video_activity/VideoList";
-import SingleBlog from "./components/blog_activity/SingleBlog";
+// import SingleBlog from "./components/blog_activity/SingleBlog";
 import BlogList from "./components/blog_activity/BlogList";
 import SingleNews from "./components/news_activity/SingleNews";
 import NewsList from "./components/news_activity/NewsList";
@@ -70,7 +70,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             {/* This will render Home for the root route */}
             <Route index element={<Home />} />
             <Route path="/blogs" element={<BlogList />} />
-            <Route path="/blogs/:id" element={<SingleBlog />}></Route>
+            <Route path="/blogs/:id" element={<SingleNews />}></Route>
             <Route path="/videos" element={<VideoList />} />
             <Route path="/press-release" element={<NewsList />} />
             <Route path="/press-release/:id" element={<SingleNews />}></Route>

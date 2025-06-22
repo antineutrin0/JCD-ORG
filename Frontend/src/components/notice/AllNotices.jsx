@@ -34,6 +34,7 @@ export default function AllNotices() {
       {noticesQuery?.hasNextPage && (
         <div className="mt-6 text-center">
           <button
+            disabled={!noticesQuery.hasNextPage || noticesQuery.isLoading}
             onClick={() => noticesQuery.fetchNextPage()}
             className="bg-green-700 hover:bg-green-800 text-white px-6 py-2 rounded-lg shadow"
           >

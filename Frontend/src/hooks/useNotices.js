@@ -50,11 +50,12 @@ export const useNoticesQuery = () => {
 
   const notices = useMemo(() => {
     if (!q.data) return [];
-    return q.data.pages.flatMap((page) =>
-      page?.docs?.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }))
+    return q.data.pages.flatMap(
+      (page) =>
+        page?.docs?.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        })) || []
     );
   }, [q.data]);
   return { noticesQuery: q, notices };
