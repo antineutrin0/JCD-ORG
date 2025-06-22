@@ -70,7 +70,7 @@ const BlogSlider = () => {
             </Link>
           </div>
         </div>
-        <div className=" relative w-full overflow-hidden">
+        <div className=" relative w-[] overflow-hidden">
           <div
             className="flex transition-transform duration-1000 ease-in-out"
             style={{
@@ -80,7 +80,7 @@ const BlogSlider = () => {
             {blogs.map((blog) => (
               <div
                 key={blog.id}
-                className={`w-1/${slidesToShow} flex-shrink-0`}
+                className={`w-1/${slidesToShow} flex-shrink-0 width-[400px]`}
               >
                 <BlogCard blog={blog} />
               </div>

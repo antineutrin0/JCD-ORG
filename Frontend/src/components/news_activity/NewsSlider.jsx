@@ -56,7 +56,6 @@ const NewsSlider = () => {
     );
   }
 
-
   return (
     <div className="my-20 mx-auto max-w-7xl">
       <div className="rounded-lg overflow-hidden">
@@ -70,7 +69,7 @@ const NewsSlider = () => {
             </Link>
           </div>
         </div>
-        <div className=" relative w-full overflow-hidden">
+        <div className=" relative  overflow-hidden">
           <div
             className="flex transition-transform duration-1000 ease-in-out"
             style={{
