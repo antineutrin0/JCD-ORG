@@ -24,8 +24,9 @@ function Bd_map() {
     }
 
     if (target && target.id) {
-      const id = target.id.toUpperCase();
-      navigate(`/district/${id}`);
+      let id = target.id;
+      id = id[0].toUpperCase() + id.slice(1).toLowerCase(); // Capitalize first letter and lowercase the rest
+      navigate(`/committee?district=${id}`);
     }
   };
 

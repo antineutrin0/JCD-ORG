@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../lib/firebase";
 
 export const useCommitteeSearch = (district, type) => {
@@ -7,12 +7,12 @@ export const useCommitteeSearch = (district, type) => {
     queryKey: ["committeeSearch", district, type],
     queryFn: async () => {
       try {
-        const qq = query(collection(db, "profiles"));
+        let qq = query(collection(db, "profiles"));
         if (district !== "All") {
-          qq.where("district", "==", district);
+          qq = query(qq, where("district", "==", district));
         }
         if (type !== "All") {
-          qq.where("type", "==", type);
+          qq = query(qq, where("committeeType", "==", type));
         }
 
         const snapshot = await getDocs(qq);

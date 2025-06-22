@@ -5,54 +5,11 @@ import Loader from "../Loader";
 import QueryError from "../QueryError";
 import { Search, MapPin, Building, Users, Eye } from "lucide-react";
 import useScrollToTop from "../../hooks/useScrollToTop";
+import { BANGLADESH_DISTRICTS, COMMITTEE_TYPES } from "./committeData";
 
-//Committee Data Structure
-// committeeFormationNoticeUrl
-// ""
-// (string)
+const districts = BANGLADESH_DISTRICTS;
 
-// committeeName
-// "শাবিপ্রবি ছাত্রদল - SUST Chatrodol "
-// (string)
-
-// committeeType
-// "University Unit"
-// (string)
-
-// createdAt
-// 23 June 2025 at 01:56:19 UTC+6
-// (timestamp)
-
-// district
-// "Sylhet"
-// (string)
-
-// id
-// "Kz5tQ1Ca9QVwpSI85xNq05TAsAw2"
-// (string)
-
-// instituteName
-// "Shahjalal University of Science and Technology"
-// (string)
-
-// updatedAt
-// 23 June 2025 at 01:56:18 UTC+6
-// (timestamp)
-
-// userId
-// "Kz5tQ1Ca9QVwpSI85xNq05TAsAw2"
-
-const districts = [
-  "All", "Dhaka", "Chittagong", "Sylhet", "Rajshahi", "Khulna", "Barisal", 
-  "Rangpur", "Mymensingh", "Comilla", "Feni", "Brahmanbaria", "Lakshmipur",
-  "Noakhali", "Chandpur", "Manikganj", "Munshiganj", "Narayanganj", "Gazipur",
-  "Shariatpur", "Pirojpur", "North Chittagong"
-];
-
-const committeeTypes = [
-  "All", "Central Committee", "District Committee", "University Unit", 
-  "College Unit", "School Unit", "Ward Committee", "Union Committee"
-];
+const committeeTypes = COMMITTEE_TYPES;
 
 export default function CommeteePage() {
   const navigate = useNavigate();
@@ -65,10 +22,15 @@ export default function CommeteePage() {
 
   const filteredCommittees = useMemo(() => {
     if (!committeeQuery.data) return [];
-    return committeeQuery.data.filter((committee) =>
-      committee.committeeName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      committee.instituteName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      committee.district?.toLowerCase().includes(searchTerm.toLowerCase())
+    return committeeQuery.data.filter(
+      (committee) =>
+        committee.committeeName
+          ?.toLowerCase()
+          .includes(searchTerm.toLowerCase()) ||
+        committee.instituteName
+          ?.toLowerCase()
+          .includes(searchTerm.toLowerCase()) ||
+        committee.district?.toLowerCase().includes(searchTerm.toLowerCase())
     );
   }, [committeeQuery.data, searchTerm]);
 
@@ -81,7 +43,7 @@ export default function CommeteePage() {
     setDistrict(searchDistrict);
     setCommitteeType(searchType);
     setSearchTerm(searchQuery);
-  }, [])  
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 py-8">
@@ -89,8 +51,8 @@ export default function CommeteePage() {
         {/* Header */}
         <div className="text-center my-12">
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Find and explore committee information across different districts and types. 
-            Search by name, institution, or location.
+            Find and explore committee information across different districts
+            and types. Search by name, institution, or location.
           </p>
         </div>
 
@@ -162,7 +124,8 @@ export default function CommeteePage() {
           {!committeeQuery.isLoading && filteredCommittees.length > 0 && (
             <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
               <div className="text-sm text-gray-600">
-                Found {filteredCommittees.length} committee{filteredCommittees.length !== 1 ? 's' : ''}
+                Found {filteredCommittees.length} committee
+                {filteredCommittees.length !== 1 ? "s" : ""}
               </div>
               <div className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
                 {searchTerm && `Searching for: "${searchTerm}"`}
@@ -188,79 +151,86 @@ export default function CommeteePage() {
           )}
 
           {/* Success State - No Results */}
-          {!committeeQuery.isLoading && !committeeQuery.isError && filteredCommittees.length === 0 && (
-            <div className="text-center py-20">
-              <Users className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">
-                No committees found
-              </h3>
-              <p className="text-gray-500">
-                Try adjusting your search terms or filters to find committees.
-              </p>
-            </div>
-          )}
+          {!committeeQuery.isLoading &&
+            !committeeQuery.isError &&
+            filteredCommittees.length === 0 && (
+              <div className="text-center py-20">
+                <Users className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-700 mb-2">
+                  No committees found
+                </h3>
+                <p className="text-gray-500">
+                  Try adjusting your search terms or filters to find committees.
+                </p>
+              </div>
+            )}
 
           {/* Success State - Results */}
-          {!committeeQuery.isLoading && !committeeQuery.isError && filteredCommittees.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {filteredCommittees.map((committee) => (
-                <div
-                  key={committee.id}
-                  className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
-                >
-                  <div className="p-6">
-                    {/* Logo and Committee Name */}
-                    <div className="flex items-start gap-3 mb-4">
-                      <img
-                        src="/logo.png"
-                        alt="Committee Logo"
-                        className="w-12 h-12 object-contain flex-shrink-0 mt-1"
-                      />
-                      <h3 className="text-xl font-bold text-gray-900 line-clamp-2 flex-1">
-                        {committee.committeeName || "Committee Name Not Available"}
-                      </h3>
-                    </div>
-
-                    {/* Institution Name */}
-                    {committee.instituteName && (
-                      <div className="flex items-center text-gray-600 mb-2">
-                        <Building className="w-4 h-4 mr-2 flex-shrink-0" />
-                        <span className="text-sm line-clamp-2">{committee.instituteName}</span>
+          {!committeeQuery.isLoading &&
+            !committeeQuery.isError &&
+            filteredCommittees.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                {filteredCommittees.map((committee) => (
+                  <div
+                    key={committee.id}
+                    className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
+                  >
+                    <div className="p-6">
+                      {/* Logo and Committee Name */}
+                      <div className="flex items-start gap-3 mb-4">
+                        <img
+                          src="/logo.png"
+                          alt="Committee Logo"
+                          className="w-12 h-12 object-contain flex-shrink-0 mt-1"
+                        />
+                        <h3 className="text-xl font-bold text-gray-900 line-clamp-2 flex-1">
+                          {committee.committeeName ||
+                            "Committee Name Not Available"}
+                        </h3>
                       </div>
-                    )}
 
-                    {/* Location */}
-                    {committee.district && (
-                      <div className="flex items-center text-gray-600 mb-2">
-                        <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
-                        <span className="text-sm">{committee.district}</span>
+                      {/* Institution Name */}
+                      {committee.instituteName && (
+                        <div className="flex items-center text-gray-600 mb-2">
+                          <Building className="w-4 h-4 mr-2 flex-shrink-0" />
+                          <span className="text-sm line-clamp-2">
+                            {committee.instituteName}
+                          </span>
+                        </div>
+                      )}
+
+                      {/* Location */}
+                      {committee.district && (
+                        <div className="flex items-center text-gray-600 mb-2">
+                          <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
+                          <span className="text-sm">{committee.district}</span>
+                        </div>
+                      )}
+
+                      {/* Committee Type */}
+                      {committee.committeeType && (
+                        <div className="mb-4">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                            {committee.committeeType}
+                          </span>
+                        </div>
+                      )}
+
+                      {/* Details Button */}
+                      <div className="pt-4 border-t border-gray-100">
+                        <button
+                          onClick={() => navigate(`/committee/${committee.id}`)}
+                          className="w-full inline-flex items-center justify-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-800 text-sm font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                        >
+                          <Eye className="w-4 h-4 mr-2" />
+                          View Details & Works
+                        </button>
                       </div>
-                    )}
-
-                    {/* Committee Type */}
-                    {committee.committeeType && (
-                      <div className="mb-4">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                          {committee.committeeType}
-                        </span>
-                      </div>
-                    )}
-
-                    {/* Details Button */}
-                    <div className="pt-4 border-t border-gray-100">
-                      <button
-                        onClick={() => navigate(`/committe/${committee.id}`)}
-                        className="w-full inline-flex items-center justify-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-800 text-sm font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-                      >
-                        <Eye className="w-4 h-4 mr-2" />
-                        View Details & Works
-                      </button>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
+              </div>
+            )}
         </div>
       </div>
     </div>

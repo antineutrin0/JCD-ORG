@@ -14,7 +14,7 @@ const BlogCard = ({ blog }) => {
       >
         {/* Card Header */}
         <div className="flex p-4 border-b border-green-700 h-26">
-          <img src="logo.png" className="w-10 h-10" />
+          <img src="/logo.png" className="w-10 h-10" />
           <div className="ml-3 flex-1">
             {/* wrap to eliipses */}
             <h3 className="text-lg text-white font-semibold line-clamp-2">
