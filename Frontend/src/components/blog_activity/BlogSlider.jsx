@@ -80,7 +80,7 @@ const BlogSlider = () => {
             {blogs.map((blog) => (
               <div
                 key={blog.id}
-                className={`w-1/${slidesToShow} flex-shrink-0 width-[400px]`}
+                className={`w-1/${slidesToShow} flex-shrink-0 w-[400px]`}
               >
                 <BlogCard blog={blog} />
               </div>
